@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Project index for J. Stanley Burris.">
+    <meta name="author" content="J. Stanley Burris">
+    <title>J. Stanley Burris | Projects</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+      :root {
+        --page-ink: #202124;
+        --page-muted: #60646c;
+        --page-line: #dde3ea;
+        --page-accent: #0f766e;
+        --page-dark: #283235;
+        --page-bg: #eef2f4;
+      }
+
+      body {
+        background: var(--page-bg);
+        color: var(--page-ink);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        min-height: 100vh;
+      }
+
+      .site-shell {
+        padding: 2rem 1rem;
+      }
+
+      .project-index {
+        background: #ffffff;
+        box-shadow: 0 24px 60px rgba(32, 33, 36, 0.14);
+        margin: 0 auto;
+        max-width: 880px;
+        padding: 2rem;
+      }
+
+      .index-header {
+        border-bottom: 1px solid var(--page-line);
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .index-header h1 {
+        font-size: clamp(2rem, 7vw, 3rem);
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .index-header p {
+        color: var(--page-muted);
+        font-size: 1.05rem;
+      }
+
+      .project-link {
+        align-items: center;
+        border: 1px solid var(--page-line);
+        color: inherit;
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+      }
+
+      .project-link:hover {
+        border-color: var(--page-accent);
+      }
+
+      .project-link i {
+        align-items: center;
+        background: var(--page-dark);
+        color: #f7c76b;
+        display: inline-flex;
+        flex: 0 0 2.75rem;
+        font-size: 1.25rem;
+        height: 2.75rem;
+        justify-content: center;
+        width: 2.75rem;
+      }
+
+      .project-link h2 {
+        font-size: 1.15rem;
+        font-weight: 800;
+      }
+
+      .project-link p {
+        color: var(--page-muted);
+        margin: 0;
+      }
+
+      @media (min-width: 768px) {
+        .site-shell {
+          padding: 3rem 1.5rem;
+        }
+
+        .project-index {
+          padding: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="site-shell">
+      <article class="project-index">
+        <header class="index-header">
+          <h1 class="mb-2">J. Stanley Burris</h1>
+          <p class="mb-0">Project index and portfolio resources.</p>
+        </header>
+
+        <a class="project-link" href="./resume/">
+          <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
+          <span>
+            <h2 class="mb-1">Resume</h2>
+            <p>Responsive HTML5/CSS3 resume built with Bootstrap 5.</p>
+          </span>
+        </a>
+      </article>
+    </main>
+  </body>
+</html>
