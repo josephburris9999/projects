@@ -112,6 +112,26 @@ a {
   line-height: 1;
 }
 
+.download-link {
+  align-items: center;
+  border: 1px solid rgba(247, 199, 107, 0.75);
+  color: #ffffff;
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  padding: 0.4rem 0.55rem;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  background: rgba(247, 199, 107, 0.12);
+}
+
+.download-link i {
+  color: #f7c76b;
+  line-height: 1;
+}
+
 .resume-main {
   padding: 2rem;
 }
