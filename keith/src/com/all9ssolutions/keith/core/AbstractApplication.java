@@ -6,10 +6,12 @@
  */
 package com.all9ssolutions.keith.core;
 
-import java.io.File;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
 import java.net.URLDecoder;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
@@ -180,11 +182,12 @@ public abstract class AbstractApplication implements Serializable {
 	 */
 	private final void setApplicationName() {
 		try {
-			String location = getLocation();
+			Path location = getLocationPath();
 			if (isJar()) {
-				applicationName = location.substring(location.lastIndexOf(File.separator) + 1, location.length() - 4);
+				String filename = location.getFileName().toString();
+				applicationName = filename.substring(0, filename.length() - 4);
 			} else {
-				applicationName = new File(location).getParentFile().getName();
+				applicationName = location.getParent().getFileName().toString();
 			}
 			System.out.println("APPLICATION NAME:" + applicationName);
 		} catch (Exception e) {
@@ -220,17 +223,31 @@ public abstract class AbstractApplication implements Serializable {
 	 * @throws UnsupportedEncodingException exception if UTF-8 is unavailable for decode
 	 */
 	public final static String getLocation() throws UnsupportedEncodingException {
-		return URLDecoder.decode(clazz.getProtectionDomain().getCodeSource().getLocation().getFile(), "UTF-8");
+		try {
+			return getLocationPath().toString();
+		} catch (URISyntaxException e) {
+			return URLDecoder.decode(clazz.getProtectionDomain().getCodeSource().getLocation().getFile(), "UTF-8");
+		}
+	}
+
+	/**
+	 * returns the location of the automated process as a platform-native path
+	 * 
+	 * @return absolute path of the application's location in the hosting operating system
+	 * @throws URISyntaxException exception if the code source location cannot be converted to a URI
+	 */
+	public final static Path getLocationPath() throws URISyntaxException {
+		return Paths.get(clazz.getProtectionDomain().getCodeSource().getLocation().toURI());
 	}
 
 	/**
 	 * returns whether the automated process is compiled in a JAR file
 	 * 
 	 * @return {@code true} if the implementing application is in development or compiled structure
-	 * @throws UnsupportedEncodingException exception if UTF-8 is unavailable for decode
+	 * @throws URISyntaxException exception if the code source location cannot be converted to a URI
 	 */
-	public final static boolean isJar() throws UnsupportedEncodingException {
-		return getLocation().toLowerCase().endsWith(".jar");
+	public final static boolean isJar() throws URISyntaxException {
+		return getLocationPath().toString().toLowerCase().endsWith(".jar");
 	}
 
 	/**

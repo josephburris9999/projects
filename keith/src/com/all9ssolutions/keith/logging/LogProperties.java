@@ -10,8 +10,8 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,12 +61,11 @@ public class LogProperties extends CustomProperties {
 		map.put("java.util.logging.FileHandler.limit", "200000");
 		map.put("java.util.logging.FileHandler.count", "100");
 		try {
-			String path = file.getCanonicalPath();
-			path = path.substring(0, path.lastIndexOf(File.separator) + 1) + "logs";
-			Files.createDirectories(Paths.get(path));
-			map.put("java.util.logging.FileHandler.pattern", path + File.separator + applicationName + "%u.%g.log");
+			Path path = file.toPath().getParent().resolve("logs");
+			Files.createDirectories(path);
+			map.put("java.util.logging.FileHandler.pattern", path.resolve(applicationName + "%u.%g.log").toString());
 		} catch (Exception e) {
-			e.printStackTrace(System.err);
+			throw new IllegalStateException("Unable to initialize log file path.", e);
 		}
 		map.put("java.util.logging.FileHandler.append", "true");
 		setPackages(applicationName);
@@ -77,7 +76,7 @@ public class LogProperties extends CustomProperties {
 		try (BufferedInputStream stream = new BufferedInputStream(new FileInputStream(file))) {
 			LogManager.getLogManager().readConfiguration(stream);
 		} catch (IOException e) {
-			e.printStackTrace(System.err);
+			throw new IllegalStateException("Unable to load logging configuration " + file, e);
 		}
 	}
 
@@ -121,9 +120,9 @@ public class LogProperties extends CustomProperties {
 	 */
 	private void setPackages(String applicationName) {
 		try {
-			String location = AbstractApplication.getLocation();
+			Path location = AbstractApplication.getLocationPath();
 			if (AbstractApplication.isJar()) {
-				try (JarFile jar = new JarFile(location)) {
+				try (JarFile jar = new JarFile(location.toFile())) {
 					JarEntry entry;
 					String path;
 					Enumeration<JarEntry> entries = jar.entries();
@@ -131,16 +130,19 @@ public class LogProperties extends CustomProperties {
 						entry = entries.nextElement();
 						if (entry.getName().endsWith(".class")) {
 							path = entry.toString();
-							packages.add(path.substring(0, path.lastIndexOf(File.separator)).replaceAll(File.separator, "."));
+							packages.add(toPackageName(path.substring(0, path.lastIndexOf('/')), '/'));
 						}
 					}
 				}
 			} else {
-				int len = location.length();
-				File[] files = new File(location).listFiles();
-				for (int i = 0, j = files.length; i < j; i++) {
-					if (!files[i].getName().equals(applicationName)) {
-						getPackagePaths(files[i], len);
+				File root = location.toFile();
+				Path rootPath = location;
+				File[] children = root.listFiles();
+				if (null != children) {
+					for (int i = 0, j = children.length; i < j; i++) {
+						if (!children[i].getName().equals(applicationName)) {
+							getPackagePaths(children[i], rootPath);
+						}
 					}
 				}
 			}
@@ -153,19 +155,53 @@ public class LogProperties extends CustomProperties {
 	 * recursive method finds all package paths in the application in development structure
 	 * 
 	 * @param file the file to search for {@code .class} files
-	 * @param len  length of the parent directory for sub-stringing the package path
+	 * @param root root directory used to calculate package-relative paths
 	 * @throws IOException exception if the canonical path does not exist (won't happen)
 	 */
-	private void getPackagePaths(File file, int len) throws IOException {
+	private void getPackagePaths(File file, Path root) throws IOException {
 		if (file.isDirectory()) {
-			File[] files = file.listFiles();
-			for (int i = 0, j = files.length; i < j; i++) {
-				getPackagePaths(files[i], len);
+			File[] children = file.listFiles();
+			if (null != children) {
+				for (int i = 0, j = children.length; i < j; i++) {
+					getPackagePaths(children[i], root);
+				}
 			}
 		} else {
 			if (file.getName().endsWith(".class")) {
-				packages.add(file.getParentFile().getCanonicalPath().substring(len).replaceAll(File.separator, "."));
+				Path packagePath = root.relativize(file.getParentFile().toPath());
+				packages.add(toPackageName(packagePath));
 			}
 		}
+	}
+
+	/**
+	 * converts a class-file directory path into a package name
+	 * 
+	 * @param path      directory path containing compiled classes
+	 * @param separator path separator used by the path
+	 * @return package name for logger configuration
+	 */
+	private String toPackageName(String path, char separator) {
+		while (path.length() > 0 && path.charAt(0) == separator) {
+			path = path.substring(1);
+		}
+		return path.replace(separator, '.');
+	}
+
+	/**
+	 * converts a class-file directory path into a package name
+	 * 
+	 * @param path directory path containing compiled classes
+	 * @return package name for logger configuration
+	 */
+	private String toPackageName(Path path) {
+		StringBuilder builder = new StringBuilder();
+		for (Path part : path) {
+			if (builder.length() > 0) {
+				builder.append('.');
+			}
+			builder.append(part.toString());
+		}
+		return builder.toString();
 	}
 }

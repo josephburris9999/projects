@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.Map;
 import java.util.Properties;
 
@@ -45,23 +45,24 @@ public class CustomProperties extends Properties implements IFileMonitor {
 	public CustomProperties(String filename) {
 		super();
 		try {
-			String location = AbstractApplication.getLocation();
+			Path location = AbstractApplication.getLocationPath();
 			if (AbstractApplication.isJar()) {
-				location = location.substring(0, location.lastIndexOf(File.separator));
+				location = location.getParent();
 			}
-			File directory = new File(location + File.separator + AbstractApplication.getApplicationName(), "resources");
-			if (!directory.exists()) {
-				System.out.println("DIRECTORY:" + directory.toURI());
-				Files.createDirectories(Paths.get(directory.toURI()));
+			Path directory = location.resolve(AbstractApplication.getApplicationName()).resolve("resources");
+			if (!Files.exists(directory)) {
+				System.out.println("DIRECTORY:" + directory.toUri());
+				Files.createDirectories(directory);
 			}
-			file = new File(directory, filename);
-			if (!file.exists()) {
-				System.out.println("FILE:" + file.toURI());
-				Files.createFile(Paths.get(file.toURI()));
+			Path path = directory.resolve(filename);
+			file = path.toFile();
+			if (!Files.exists(path)) {
+				System.out.println("FILE:" + path.toUri());
+				Files.createFile(path);
 			}
 			load(file.getCanonicalPath());
 		} catch (Exception e) {
-			e.printStackTrace(System.err);
+			throw new IllegalStateException("Unable to initialize properties file " + filename, e);
 		}
 	}
 
@@ -77,7 +78,7 @@ public class CustomProperties extends Properties implements IFileMonitor {
 			}
 			setCheckPeriod(getCheckPeriod(), new File(path).toString());
 		} catch (Exception e) {
-			e.printStackTrace(System.err);
+			throw new IllegalStateException("Unable to load properties file " + path, e);
 		}
 	}
 
@@ -89,6 +90,9 @@ public class CustomProperties extends Properties implements IFileMonitor {
 	public void synchronize(Map<String, String> map) {
 		if (null == map) {
 			return;
+		}
+		if (null == file) {
+			throw new IllegalStateException("Properties file was not initialized.");
 		}
 		if (!map.containsKey("check.period")) {
 			System.out.println("Configured check period does not exist for file " + file.getName() + ". Check period is " + (checkPeriod / 1000L) + " seconds.");
@@ -113,7 +117,7 @@ public class CustomProperties extends Properties implements IFileMonitor {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
 			store(writer, null);
 		} catch (Exception e) {
-			e.printStackTrace(System.err);
+			throw new IllegalStateException("Unable to write properties file " + file, e);
 		}
 	}
 

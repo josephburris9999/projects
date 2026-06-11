@@ -111,7 +111,9 @@ class FileMonitor implements Serializable {
 		 */
 		@Override
 		public void run() {
-			if (new File(path).lastModified() != this.lastModified) {
+			long modified = new File(path).lastModified();
+			if (modified != this.lastModified) {
+				this.lastModified = modified;
 				fireFileChangeEvent(this.monitor, this.path);
 			}
 		}
