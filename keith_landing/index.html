@@ -1,0 +1,271 @@
+<!--
+	Keith Framework landing page.
+	Includes standard footer.
+	@author joseph.burris@gmail.com (place-holder)
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="description" content="Landing page for the Keith Framework.">
+		<meta name="author" content="joseph.burris@gmail.com (place-holder)">
+		<title>Keith Framework</title>
+		<link rel="icon" type="image/svg" href="./images/keith.svg">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="./styles.css">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJPV8D9JB"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-0RJPV8D9JB');
+		</script>
+	</head>
+	<body>
+		<main>
+			<section class="hero-section">
+				<div class="container hero-content">
+					<div class="hero-copy">
+						<p class="eyebrow">Java automation support</p>
+						<h1>Keith Framework</h1>
+						<p class="lead">
+							A small Java framework for automated processes<a class="hero-note" href="#" data-bs-toggle="popover" data-bs-trigger="focus" title="Note" data-bs-content="An automated process is an application which runs without requiring prompts or intervention."><sup>*</sup></a> that need durable configuration,
+							reliable exception handling, and useful logging without repeated boilerplate code.
+						</p>
+						<div class="hero-actions">
+							<button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#downloads">
+								<span class="bi bi-download pe-1" aria-hidden="true"></span>Free Download
+							</button>
+							<a class="btn btn-outline-light btn-lg" href="./resources/KeithFramework.pdf" title="Click to open this file." target="_blank">
+								<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>Read The PDF
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container mx-auto px-4 py-5">
+				<div class="feature-strip" aria-label="Keith Framework highlights">
+					<div>
+						<span class="bi bi-sliders" aria-hidden="true"></span>
+						<h2>Configurable</h2>
+						<p>Creates and preserves editable runtime properties beside the compiled process.</p>
+					</div>
+					<div>
+						<span class="bi bi-shield-check" aria-hidden="true"></span>
+						<h2>Resilient</h2>
+						<p>Wraps application work in consistent exception handling for unattended runtime paths.</p>
+					</div>
+					<div>
+						<span class="bi bi-journal-text" aria-hidden="true"></span>
+						<h2>Observable</h2>
+						<p>Ensures logging configuration exists so support teams can tune diagnostics when needed.</p>
+					</div>
+				</div>
+				<div class="row align-items-center section-band">
+					<div class="col-lg-6 p-4">
+						<h2>Modifiable Properties</h2>
+						<p>
+							The fundamental principle in the Keith framework is to support configured properties
+							and expose them to team members responsible for the application before or during runtime.
+							When an application starts, the Keith framework verifies the external properties file
+							exists and the configured keys are present. <b>The property values are preserved between executions.</b> These properties are stored
+							in an <i>application.properties</i> file found alongside the compiled automated process.
+							For example, if an application named <i>MyAutomatedProcess.jar</i> lives on
+							the Desktop, then the file path is
+							<i>../MyAutomatedProcess/resources/application.properties</i>
+						</p>
+					</div>
+					<div class="col-lg-6 p-4">
+						<img src="./images/keith-path.png" alt="Path to the external properties file." class="feature-image w-100">
+						<p class="supporting-note pt-3">
+							<b>Note:</b><br>
+							The Keith framework also ensures a logging.properties file exists. In the rare scenario where
+							logging levels need to be raised or lowered, this file is available to receive the
+							modifications.
+						</p>
+					</div>
+				</div>
+				<div class="row align-items-center section-band">
+					<div class="col-lg-6 p-4">
+						<h2>Implementation</h2>
+						<p>
+							Since the Keith framework encloses code in exception-handling logic and enables
+							Java&#39;s built-in logging, programmers have the freedom to build without writing boilerplate
+							structures. How difficult is it to incorporate the Keith framework? Watch the
+							video and see in three minutes.
+						</p>
+						<p>
+							For text instructions and more information about the Keith framework, check out the
+							<a class="link-primary ps-1" href="./resources/KeithFramework.pdf" title="Click to open this file." target="_blank">
+								<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>PDF
+							</a>
+						</p>
+					</div>
+					<div class="col-lg-6 p-4">
+						<a class="video-preview" href="#" data-bs-toggle="modal" data-bs-target="#videos" title="How to implement Keith framework." data-title="Implement Keith Framework" data-src="./videos/keith-demo.m4v">
+							<img src="./images/keith-demo.png" alt="Start the Keith Framework implementation video.">
+						</a>
+					</div>
+				</div>
+				<div class="row section-band">
+					<div class="col-12 p-4 section-intro">
+						<h2>Enhancements</h2>
+						<p>
+							Another strength in the Keith framework is the ability to create enhancements supporting
+							common functionality. These enhancements will typically take the form of an interface or
+							superclass. Using these constructs provides direct access to the core of the Keith
+							framework and leverages object-oriented programming principles as assets in building
+							automated processes.
+						</p>
+					</div>
+				</div>
+				<div class="row enhancement-grid">
+					<div class="col-lg-6 mb-4">
+						<div class="card enhancement-card">
+							<div class="card-header">
+								<h4 class="card-title">Steppable</h4>
+							</div>
+							<div class="card-body">
+								<div class="enhancement-body">
+									<p class="card-text">
+										This enhancement is an easy way to set breaks in an automated process,
+										which may be used to isolate logical steps. These steps may be configured to stop the
+										automated process until restart, record completed steps as they are reached in
+										case the automated process needs to resume later, or support any number
+										of scenarios where defined steps would be useful. 
+									</p>
+									<img src="./images/step-ladder-wood.svg" alt="A wooden step ladder.">
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="card-actions">
+									<a href="#" class="btn btn-md btn-secondary mb-1" data-bs-toggle="modal" data-bs-target="#videos" title="Click to watch the Steppable enhancement" data-title="Steppable Enhancement" data-src="./videos/keith-steppable-demo.m4v">
+										<span class="bi bi-film pe-1" aria-hidden="true"></span>Watch The Video
+									</a>
+									<a href="./resources/KeithFrameworkSteppable.pdf" class="btn btn-md btn-secondary mb-1" title="Click to open this file." target="_blank">
+										<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>Open The PDF
+									</a>
+									<a href="./resources/keith-steppable-1.0.0-all.zip" class="btn btn-md btn-secondary mb-1" title="Click to download this enhancement.">
+										<span class="bi bi-download pe-1" aria-hidden="true"></span>Free Download
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 mb-4">
+						<div class="card enhancement-card">
+							<div class="card-header">
+								<h4 class="card-title">Databasable</h4>
+							</div>
+							<div class="card-body">
+								<div class="enhancement-body">
+									<p class="card-text">
+										Download this enhancement for basic support when incorporating databases with
+										an automated process. The logic simplifies getting database connections,
+										closing resources, and logging warnings as needed. Multiple databases may be
+										registered and available throughout your classes. All that&#39;s necessary is
+										for you to provide connection properties and JAR dependencies.
+									</p>
+									<img src="./images/database.svg" alt="A database cylinder.">
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="card-actions">
+									<a href="#" class="btn btn-md btn-secondary mb-1" data-bs-toggle="modal" data-bs-target="#videos" title="Click to watch the Databasable enhancement" data-title="Databasable Enhancement" data-src="./videos/keith-databasable-demo.m4v">
+										<span class="bi bi-film pe-1" aria-hidden="true"></span>Watch The Video
+									</a>
+									<a href="./resources/KeithFrameworkDatabasable.pdf" class="btn btn-md btn-secondary mb-1" title="Click to open this file." target="_blank">
+										<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>Open The PDF
+									</a>
+									<a href="./resources/keith-databasable-1.0.0-all.zip" class="btn btn-md btn-secondary mb-1" title="Click to download this enhancement.">
+										<span class="bi bi-download pe-1" aria-hidden="true"></span>Free Download
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="w-100 mx-auto p-4 text-center">
+			<ul class="w-100 list-inline my-2 d-inline-block">
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="mailto:hello@all9ssolutions.com?subject=all9s%20Solutions" title="Contact all9s Solutions LLC"><span class="bi bi-2x bi-envelope me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="https://www.linkedin.com/in/joseph-burris-5a13ba409" title="LinkedIn" target="_blank"><span class="bi bi-2x bi-linkedin me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="https://github.com/josephburris9999/projects" title="GitHub" target="_blank"><span class="bi bi-2x bi-github me-2" aria-hidden="true"></span></a>
+				</li>
+			</ul>
+			<ul class="w-100 list-inline my-2 d-inline-block">
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./termsofuse.html" title="Terms Of Use" target="_blank"><span class="bi bi-2x bi-text-paragraph me-2" aria-hidden="true"></span><span class="fs-7">Terms</span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./privacypolicy.html" title="Our Privacy Policy" target="_blank"><span class="bi bi-2x bi-key me-2" aria-hidden="true"></span><span class="fs-7">Privacy Policy</span></a>
+				</li>
+			</ul>
+			<small class="w-100 my-2 fs-7 d-inline-block">
+				Copyright &copy; 2026 <a class="link-primary" href="https://all9ssolutions.com/" target="_blank">all9s Solutions LLC</a>, all rights reserved.
+			</small>
+		</footer>
+		<div class="modal fade" id="downloads">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Keith Framework Downloads</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th style="width:5%"></th>
+										<th style="width:95%;"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<a href="./resources/keith-1.0.0-all.zip" title="Click to download this file."><span class="bi bi-download" aria-hidden="true"></span></a>
+										</td>
+										<td>keith-1.0.0-all.zip</td>
+									</tr>
+								</tbody>
+								<caption>Downloads include classes, sources, and API.</caption>
+							</table>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="videos">
+			<div class="modal-dialog modal-dialog-centered modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title"></h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<video src="" style="width:100%;" allowfullscreen controls></video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>
