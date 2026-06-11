@@ -1,0 +1,28 @@
+# Eclipse build output
+
+bin/
+
+# Eclipse project files
+
+.classpath
+.project
+.settings/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+
+# Temporary files
+
+*.tmp
+*.bak
+
+# Generated archives
+
+*.jar
+*.war
