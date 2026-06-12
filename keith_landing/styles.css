@@ -44,13 +44,15 @@ footer{
 a.link-primary,
 a.link-primary:focus,
 a.link-primary:visited{
-	color:var(--body-color);
-	text-decoration:underline
+	color:var(--body-color) !important;
+	text-decoration:underline;
+	text-decoration-color:currentColor !important
 }
 
 a.link-primary:hover{
-	color:rgb(90,0,0);
-	text-decoration:none
+	color:rgb(90,0,0) !important;
+	text-decoration:none;
+	text-decoration-color:currentColor !important
 }
 
 .btn-secondary{
@@ -92,6 +94,23 @@ a.link-primary:hover{
 .modal-content{
 	background-color:var(--body-bg-color);
 	border-radius:1rem
+}
+
+.btn-site-danger{
+	color:var(--bs-white);
+	background-color:var(--card-bg-color);
+	border-color:var(--card-bg-color)
+}
+
+.btn-site-danger:hover,
+.btn-site-danger:focus{
+	color:var(--bs-white);
+	background-color:rgb(58,0,10);
+	border-color:rgb(58,0,10)
+}
+
+.btn-site-danger:focus{
+	box-shadow:0 0 0 .25rem rgba(78,0,14,.22)
 }
 
 .legal-page{
@@ -162,23 +181,6 @@ a.link-primary:hover{
 .legal-return-top{
 	margin-top:0;
 	margin-bottom:1.5rem
-}
-
-.legal-return .btn-outline-secondary{
-	color:var(--body-color);
-	background-color:rgba(255,255,255,.62);
-	border-color:var(--body-color)
-}
-
-.legal-return .btn-outline-secondary:hover,
-.legal-return .btn-outline-secondary:focus{
-	color:var(--bs-white);
-	background-color:var(--card-bg-color);
-	border-color:var(--card-bg-color)
-}
-
-.legal-return .btn-outline-secondary:focus{
-	box-shadow:0 0 0 .25rem rgba(78,0,14,.2)
 }
 
 .hero-section{
