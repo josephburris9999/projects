@@ -39,14 +39,11 @@ public class DatabasePropertiesTest {
 	@Test
 	public void isValidRequiresAllDatabaseFields() {
 		DatabaseProperties properties = new DatabaseProperties("validity");
-
 		assertFalse(properties.isValid());
-
 		properties.setDriver("java.lang.String");
 		properties.setUrl("jdbc:test");
 		properties.setPassword("secret");
 		properties.setUsername("user");
-
 		assertTrue(properties.isValid());
 	}
 
@@ -63,9 +60,7 @@ public class DatabasePropertiesTest {
 		properties.setUrl("jdbc:test");
 		properties.setPassword("secret");
 		properties.setUsername("user");
-
 		String text = properties.toString();
-
 		assertTrue(text.contains("id=masked"));
 		assertTrue(text.contains("driver=java.lang.String"));
 		assertTrue(text.contains("url=jdbc:test"));
@@ -74,6 +69,9 @@ public class DatabasePropertiesTest {
 		assertFalse(text.contains("secret"));
 	}
 
+	/**
+	 * Nested class provides property values to execute tests.
+	 */
 	public static class TestApplication extends AbstractApplication {
 		private static final long serialVersionUID = 1L;
 

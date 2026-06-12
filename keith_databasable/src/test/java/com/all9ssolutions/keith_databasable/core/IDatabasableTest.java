@@ -63,6 +63,9 @@ public class IDatabasableTest {
 		return properties;
 	}
 
+	/**
+	 * Nested class provides property values to execute tests.
+	 */
 	public static class PlainApplication extends AbstractApplication {
 		private static final long serialVersionUID = 1L;
 
@@ -80,6 +83,9 @@ public class IDatabasableTest {
 		}
 	}
 
+	/**
+	 * Nested class provides property values to execute tests.
+	 */
 	public static class DatabasableApplication extends AbstractApplication implements IDatabasable {
 		private static final long serialVersionUID = 1L;
 		private static DatabaseProperties[] properties;
