@@ -1,6 +1,6 @@
 /*
  * Landing page support JavaScript.
- * @author joseph.burris@gmail.com (place-holder)
+ * @author Joseph Burris
  */
 
 let activePopover = null;
@@ -39,20 +39,12 @@ document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function(trigger
 	});
 });
 
-let videosModal = document.querySelector('#videos');
 let openModal = null;
 let modalBackdrop = null;
 
 function closeModal() {
 	if (!openModal) {
 		return;
-	}
-
-	let video = openModal.querySelector('video');
-	if (video) {
-		video.pause();
-		video.removeAttribute('src');
-		video.load();
 	}
 
 	openModal.classList.remove('show');
@@ -69,20 +61,7 @@ function closeModal() {
 	openModal = null;
 }
 
-function showModal(modal, trigger) {
-	if (modal === videosModal && trigger) {
-		let modalTitle = videosModal.querySelector('.modal-title');
-		let video = videosModal.querySelector('video');
-
-		if (modalTitle) {
-			modalTitle.textContent = trigger.getAttribute('data-title') || '';
-		}
-
-		if (video) {
-			video.setAttribute('src', trigger.getAttribute('data-src') || '');
-		}
-	}
-
+function showModal(modal) {
 	openModal = modal;
 	modal.removeAttribute('aria-hidden');
 	modal.setAttribute('aria-modal', 'true');
@@ -102,7 +81,7 @@ document.addEventListener('click', function(event) {
 		let modal = document.querySelector(modalTrigger.getAttribute('data-bs-target'));
 		if (modal) {
 			event.preventDefault();
-			showModal(modal, modalTrigger);
+			showModal(modal);
 		}
 		return;
 	}

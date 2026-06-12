@@ -1,6 +1,6 @@
 /*
  * Keith Framework landing page styles.
- * @author joseph.burris@gmail.com (place-holder)
+ * @author Joseph Burris
  */
 
 :root{
@@ -97,7 +97,7 @@ a.link-primary:hover{
 .legal-page{
 	background:
 		linear-gradient(180deg,rgba(255,250,250,.96),rgba(255,255,255,.92)),
-		url("./images/keith-hero-bg.png") no-repeat right top;
+		url("./images/keith-hero-bg.jpg") no-repeat right top;
 	background-size:cover;
 	background-attachment:fixed
 }
@@ -106,7 +106,7 @@ a.link-primary:hover{
 	color:var(--bs-white);
 	background:
 		linear-gradient(90deg,rgba(29,21,24,.92),rgba(70,0,0,.78) 48%,rgba(16,18,21,.2)),
-		url("./images/keith-hero-bg.png") no-repeat right center;
+		url("./images/keith-hero-bg.jpg") no-repeat right center;
 	background-size:cover;
 	padding:5rem 0 4rem
 }
@@ -187,7 +187,7 @@ a.link-primary:hover{
 	color:var(--bs-white);
 	background:
 		linear-gradient(90deg,rgba(29,21,24,.88),rgba(70,0,0,.7) 42%,rgba(16,18,21,.16)),
-		url("./images/keith-hero-bg.png") no-repeat right center;
+		url("./images/keith-hero-bg.jpg") no-repeat right center;
 	background-size:cover;
 	display:flex;
 	align-items:center;
@@ -364,21 +364,34 @@ a.link-primary:hover{
 	font-weight:700
 }
 
-.feature-image,
-.video-preview img{
+.note-block{
+	background:
+		linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,250,250,.94)),
+		linear-gradient(90deg,rgba(78,0,14,.12),rgba(18,104,99,.08));
+	border:1px solid var(--line-color);
+	border-left:.35rem solid var(--body-color);
+	border-radius:.45rem;
+	box-shadow:0 .75rem 1.5rem rgba(70,0,0,.08);
+	color:var(--ink-color);
+	font-weight:600;
+	margin-top:1.25rem;
+	padding:1rem 1.1rem
+}
+
+.note-label{
+	color:var(--body-color);
+	display:block;
+	font-size:.78rem;
+	font-weight:800;
+	letter-spacing:.04rem;
+	margin-bottom:.35rem;
+	text-transform:uppercase
+}
+
+.feature-image{
 	border:1px solid var(--line-color);
 	border-radius:.5rem;
 	box-shadow:0 1rem 2rem rgba(70,0,0,.11)
-}
-
-.video-preview{
-	position:relative;
-	display:block
-}
-
-.video-preview img{
-	display:block;
-	width:100%
 }
 
 .card{
@@ -439,7 +452,7 @@ a.link-primary:hover{
 .card-actions{
 	display:flex;
 	flex-wrap:wrap;
-	justify-content:center;
+	justify-content:flex-end;
 	gap:.25rem
 }
 
@@ -467,7 +480,7 @@ sup{
 		min-height:38rem;
 		background:
 			linear-gradient(180deg,rgba(29,21,24,.93),rgba(70,0,0,.72)),
-			url("./images/keith-hero-bg.png") no-repeat center bottom;
+			url("./images/keith-hero-bg.jpg") no-repeat center bottom;
 		background-size:cover
 	}
 

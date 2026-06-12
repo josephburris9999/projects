@@ -1,7 +1,7 @@
 <!--
 	Keith Framework landing page.
 	Includes standard footer.
-	@author joseph.burris@gmail.com (place-holder)
+	@author Joseph Burris
 -->
 
 <!DOCTYPE html>
@@ -12,12 +12,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		<meta name="description" content="Landing page for the Keith Framework.">
-		<meta name="author" content="joseph.burris@gmail.com (place-holder)">
+		<meta name="author" content="Joseph Burris">
 		<title>Keith Framework</title>
 		<link rel="icon" type="image/svg" href="./images/keith.svg">
+		<link rel="preload" as="image" href="./images/keith-hero-bg.jpg">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="./styles.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="./styles.css?v=1">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJPV8D9JB"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -91,25 +92,20 @@
 					</div>
 				</div>
 				<div class="row align-items-center section-band">
-					<div class="col-lg-6 p-4">
+					<div class="col-12 p-4">
 						<h2>Implementation</h2>
 						<p>
 							Since the Keith framework encloses code in exception-handling logic and enables
 							Java&#39;s built-in logging, programmers have the freedom to build without writing boilerplate
-							structures. How difficult is it to incorporate the Keith framework? Watch the
-							video and see in three minutes.
-						</p>
-						<p>
-							For text instructions and more information about the Keith framework, check out the
+							structures. For text instructions and more information about the Keith framework, check out the
 							<a class="link-primary ps-1" href="./resources/KeithFramework.pdf" title="Click to open this file." target="_blank">
 								<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>PDF
 							</a>
 						</p>
-					</div>
-					<div class="col-lg-6 p-4">
-						<a class="video-preview" href="#" data-bs-toggle="modal" data-bs-target="#videos" title="How to implement Keith framework." data-title="Implement Keith Framework" data-src="./videos/keith-demo.m4v">
-							<img src="./images/keith-demo.png" alt="Start the Keith Framework implementation video.">
-						</a>
+						<p class="note-block">
+							<span class="note-label">Note</span>
+							When changes are made to the configured property values in the code during development, the external property files must either be deleted (recommended), or manually updated between executions. When deleted, the external property files will be recreated using your changed values at the next run.
+						</p>
 					</div>
 				</div>
 				<div class="row section-band">
@@ -144,9 +140,6 @@
 							</div>
 							<div class="card-footer">
 								<div class="card-actions">
-									<a href="#" class="btn btn-md btn-secondary mb-1" data-bs-toggle="modal" data-bs-target="#videos" title="Click to watch the Steppable enhancement" data-title="Steppable Enhancement" data-src="./videos/keith-steppable-demo.m4v">
-										<span class="bi bi-film pe-1" aria-hidden="true"></span>Watch The Video
-									</a>
 									<a href="./resources/KeithFrameworkSteppable.pdf" class="btn btn-md btn-secondary mb-1" title="Click to open this file." target="_blank">
 										<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>Open The PDF
 									</a>
@@ -176,9 +169,6 @@
 							</div>
 							<div class="card-footer">
 								<div class="card-actions">
-									<a href="#" class="btn btn-md btn-secondary mb-1" data-bs-toggle="modal" data-bs-target="#videos" title="Click to watch the Databasable enhancement" data-title="Databasable Enhancement" data-src="./videos/keith-databasable-demo.m4v">
-										<span class="bi bi-film pe-1" aria-hidden="true"></span>Watch The Video
-									</a>
 									<a href="./resources/KeithFrameworkDatabasable.pdf" class="btn btn-md btn-secondary mb-1" title="Click to open this file." target="_blank">
 										<span class="bi bi-file-earmark-pdf pe-1" aria-hidden="true"></span>Open The PDF
 									</a>
@@ -250,22 +240,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="videos">
-			<div class="modal-dialog modal-dialog-centered modal-fullscreen">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title"></h4>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-					</div>
-					<div class="modal-body">
-						<video src="" style="width:100%;" allowfullscreen controls></video>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript" src="./main.js"></script>
+		<script type="text/javascript" src="./main.js?v=1"></script>
 	</body>
 </html>
