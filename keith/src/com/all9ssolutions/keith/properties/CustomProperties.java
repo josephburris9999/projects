@@ -122,7 +122,7 @@ public class CustomProperties extends Properties implements IFileMonitor {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * calls the load method when the configured external file has been changed
 	 */
 	@Override
 	public void fileChanged(String path) {
@@ -140,7 +140,7 @@ public class CustomProperties extends Properties implements IFileMonitor {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * configures the a file monitor with the wait time for checks
 	 */
 	@Override
 	public void setCheckPeriod(long millis, String path) {

@@ -35,13 +35,15 @@ public class AbstractApplicationTest {
 	@Test
 	public void applicationInitializesConfiguredProperties() {
 		new TestApplication(new String[] { "one", "two" });
-
 		assertEquals("one", AbstractApplication.getArgs()[0]);
 		assertEquals("3000", AbstractApplication.getApplicationProperties().getProperty("check.period"));
 		assertEquals("configured", AbstractApplication.getApplicationProperties().getProperty("custom.value"));
 		assertTrue(TestApplication.ran);
 	}
 
+	/**
+	 * Nested class provides property values to execute tests.
+	 */
 	public static class TestApplication extends AbstractApplication {
 		private static final long serialVersionUID = 1L;
 		private static boolean ran;
