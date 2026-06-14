@@ -1,0 +1,12 @@
+.classpath
+.project
+.agents/
+.codex/
+.git/
+.settings/
+.tools/
+build/
+target/
+*.log
+*.tmp
+*.war

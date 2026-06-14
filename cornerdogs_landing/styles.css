@@ -1,0 +1,427 @@
+/*
+ * Corner Dogs landing page styles.
+ * @author Joseph Burris
+ */
+
+:root{
+	--body-color:rgb(8,91,54);
+	--body-bg-color:rgb(255,251,242);
+	--card-bg-color:rgb(125,24,17);
+	--card-edge-color:rgba(244,183,75,.42);
+	--accent-color:rgb(222,126,21);
+	--gold-color:rgb(224,169,70);
+	--surface-color:rgb(255,255,248);
+	--ink-color:rgb(45,39,31);
+	--muted-color:rgb(98,87,72);
+	--line-color:rgba(8,91,54,.18);
+	--secondary-color:rgb(8,91,54);
+	--secondary-color-hover:rgb(4,69,39);
+	--secondary-bg-color:rgb(255,248,225);
+	--secondary-bg-color-hover:rgb(255,238,187);
+	--secondary-bdr-color:rgb(255,248,225);
+	--secondary-bdr-color-hover:rgb(255,228,160);
+	--secondary-shadow-color:rgba(244,183,75,.32)
+}
+
+html{
+	position:relative;
+	min-height:100%
+}
+
+body{
+	color:var(--ink-color);
+	background-color:var(--body-bg-color);
+	cursor:default;
+	font-size:1.02rem;
+	line-height:1.65
+}
+
+footer{
+	bottom:0;
+	line-height:1rem
+}
+
+a.link-primary,
+a.link-primary:focus,
+a.link-primary:visited{
+	color:var(--body-color) !important;
+	text-decoration:underline;
+	text-decoration-color:currentColor !important
+}
+
+a.link-primary:hover{
+	color:var(--card-bg-color) !important;
+	text-decoration:none;
+	text-decoration-color:currentColor !important
+}
+
+.btn-secondary{
+	color:var(--secondary-color);
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color)
+}
+
+.btn-secondary:hover{
+	color:var(--secondary-color-hover);
+	background-color:var(--secondary-bg-color-hover);
+	border-color:var(--secondary-bdr-color-hover)
+}
+
+.btn-secondary:focus{
+	color:var(--secondary-color);
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color);
+	box-shadow:0 0 0 .25rem var(--secondary-shadow-color)
+}
+
+.btn-secondary:active,
+.btn-secondary.active{
+	color:var(--secondary-color);
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color)
+}
+
+.btn-md{
+	width:auto;
+	min-width:9.5rem;
+	font-size:.86rem
+}
+
+.fs-7{
+	font-size:.9rem !important
+}
+
+.modal-content{
+	background-color:var(--body-bg-color);
+	border-radius:.5rem
+}
+
+.btn-site-danger{
+	color:var(--bs-white);
+	background-color:var(--card-bg-color);
+	border-color:var(--card-bg-color)
+}
+
+.btn-site-danger:hover,
+.btn-site-danger:focus{
+	color:var(--bs-white);
+	background-color:rgb(93,18,13);
+	border-color:rgb(93,18,13)
+}
+
+.btn-site-danger:focus{
+	box-shadow:0 0 0 .25rem rgba(125,24,17,.22)
+}
+
+.hero-section{
+	position:relative;
+	min-height:clamp(31rem,74vh,45rem);
+	color:var(--bs-white);
+	background:
+		linear-gradient(90deg,rgba(22,24,20,.94),rgba(8,91,54,.82) 44%,rgba(125,24,17,.28)),
+		url("./images/cornerdogs-logo.png") no-repeat right 8% center;
+	background-size:auto, min(48vw,32rem);
+	display:flex;
+	align-items:center;
+	overflow:hidden
+}
+
+.hero-section::after{
+	position:absolute;
+	right:0;
+	bottom:0;
+	left:0;
+	height:.6rem;
+	content:"";
+	background:linear-gradient(90deg,var(--body-color),var(--gold-color),var(--card-bg-color))
+}
+
+.hero-content{
+	position:relative;
+	z-index:1
+}
+
+.hero-copy{
+	max-width:45rem;
+	padding:4rem 0
+}
+
+.hero-logo{
+	display:block;
+	width:min(13rem,44vw);
+	height:auto;
+	margin-bottom:1.25rem;
+	filter:drop-shadow(0 1rem 1.4rem rgba(0,0,0,.32))
+}
+
+.eyebrow{
+	margin-bottom:.65rem;
+	text-transform:uppercase;
+	font-size:.78rem;
+	font-weight:700;
+	letter-spacing:.08rem
+}
+
+.hero-section h1{
+	font-size:clamp(2.75rem,7vw,5.25rem);
+	line-height:.95;
+	font-weight:800;
+	margin-bottom:1.25rem;
+	white-space:nowrap
+}
+
+.hero-section .lead{
+	max-width:41rem;
+	font-size:clamp(1.08rem,2.1vw,1.35rem);
+	color:rgba(255,255,255,.94)
+}
+
+.hero-actions{
+	display:flex;
+	flex-wrap:wrap;
+	gap:.8rem;
+	margin-top:1.75rem
+}
+
+.feature-strip{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:1rem;
+	margin-top:-6rem;
+	margin-bottom:3rem;
+	position:relative;
+	z-index:2
+}
+
+.feature-strip > div{
+	background:var(--surface-color);
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	box-shadow:0 1rem 2rem rgba(69,45,22,.12);
+	padding:1.35rem;
+	min-height:12rem
+}
+
+.feature-strip .bi{
+	color:var(--accent-color);
+	font-size:2rem
+}
+
+.feature-strip h2{
+	font-size:1.15rem;
+	font-weight:800;
+	margin:.9rem 0 .45rem
+}
+
+.feature-strip p{
+	color:var(--muted-color);
+	margin:0
+}
+
+.section-band{
+	border-top:1px solid var(--line-color);
+	padding-top:2rem;
+	padding-bottom:2rem
+}
+
+.section-band h2,
+.section-intro h2{
+	color:var(--ink-color);
+	font-size:clamp(1.75rem,3vw,2.35rem);
+	font-weight:800;
+	margin-bottom:1rem
+}
+
+.feature-image{
+	display:block;
+	width:min(100%,18rem);
+	height:auto;
+	margin:auto;
+	filter:drop-shadow(0 1rem 1.6rem rgba(69,45,22,.18))
+}
+
+.demo-board{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:.75rem
+}
+
+.demo-board > div{
+	background:
+		linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,0) 40%),
+		var(--body-color);
+	border:1px solid var(--card-edge-color);
+	border-radius:.5rem;
+	color:var(--bs-white);
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	min-height:10rem;
+	padding:1rem;
+	text-align:center
+}
+
+.demo-board .bi{
+	color:var(--gold-color);
+	font-size:2rem;
+	margin-bottom:.75rem
+}
+
+.demo-board strong{
+	display:block;
+	font-size:1.05rem
+}
+
+.demo-board small{
+	color:rgba(255,255,255,.8);
+	font-size:.86rem
+}
+
+.note-block{
+	background-color:rgba(255,255,255,.72);
+	border-left:.35rem solid var(--accent-color);
+	border-radius:.35rem;
+	color:var(--muted-color);
+	margin-top:1.25rem;
+	padding:1rem 1.15rem
+}
+
+.note-label{
+	color:var(--ink-color);
+	display:block;
+	font-weight:800;
+	margin-bottom:.35rem;
+	text-transform:uppercase;
+	font-size:.78rem;
+	letter-spacing:.08rem
+}
+
+.callout-card{
+	background:var(--surface-color);
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	box-shadow:0 .75rem 1.5rem rgba(69,45,22,.08);
+	height:100%
+}
+
+.callout-card .card-body{
+	padding:1.35rem
+}
+
+.callout-card .bi{
+	color:var(--card-bg-color);
+	font-size:1.8rem
+}
+
+.callout-card h3{
+	font-size:1.12rem;
+	font-weight:800;
+	margin:.9rem 0 .5rem
+}
+
+.callout-card p{
+	color:var(--muted-color);
+	margin:0
+}
+
+.legal-page{
+	background:
+		linear-gradient(180deg,rgba(255,251,242,.97),rgba(255,255,248,.94)),
+		url("./images/cornerdogs-logo.png") no-repeat right top;
+	background-size:auto, min(48vw,30rem);
+	background-attachment:fixed
+}
+
+.legal-hero{
+	color:var(--bs-white);
+	background:
+		linear-gradient(90deg,rgba(22,24,20,.94),rgba(8,91,54,.82) 50%,rgba(125,24,17,.25)),
+		url("./images/cornerdogs-logo.png") no-repeat right center;
+	background-size:auto, min(42vw,26rem);
+	padding:5rem 0 4rem
+}
+
+.legal-hero h1{
+	font-size:clamp(2.75rem,7vw,5.25rem);
+	line-height:1;
+	font-weight:800;
+	margin-bottom:1rem
+}
+
+.legal-hero .lead{
+	max-width:44rem;
+	color:rgba(255,255,255,.92)
+}
+
+.legal-content{
+	padding-top:3rem;
+	padding-bottom:4rem
+}
+
+.legal-content .col-lg-10{
+	background-color:rgba(255,255,248,.94);
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	box-shadow:0 1rem 2rem rgba(69,45,22,.1);
+	padding:2rem
+}
+
+.legal-content h2{
+	color:var(--ink-color);
+	font-size:1.25rem;
+	font-weight:700;
+	margin-top:1.75rem;
+	margin-bottom:.5rem
+}
+
+.legal-content h2:first-of-type{
+	margin-top:0
+}
+
+.legal-updated{
+	color:var(--muted-color);
+	font-size:.95rem
+}
+
+.legal-return{
+	display:flex;
+	justify-content:flex-end;
+	margin-top:2rem
+}
+
+.legal-return-top{
+	margin-top:0;
+	margin-bottom:1.5rem
+}
+
+@media (max-width:991.98px){
+	.hero-section{
+		background:
+			linear-gradient(90deg,rgba(22,24,20,.96),rgba(8,91,54,.86)),
+			url("./images/cornerdogs-logo.png") no-repeat right bottom;
+		background-size:auto, 18rem
+	}
+
+	.feature-strip,
+	.demo-board{
+		grid-template-columns:1fr
+	}
+
+	.feature-strip{
+		margin-top:-3rem
+	}
+}
+
+@media (max-width:575.98px){
+	.hero-section h1{
+		white-space:normal
+	}
+
+	.hero-actions .btn{
+		width:100%
+	}
+
+	.legal-content .col-lg-10{
+		padding:1.25rem
+	}
+}

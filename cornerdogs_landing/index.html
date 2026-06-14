@@ -1,9 +1,7 @@
 <!--
-	Wizard landing page.
-	Includes contact section and standard footer.
-	@author joseph.burris@gmail.com (place-holder)
+	Corner Dogs landing page.
+	@author Joseph Burris
 -->
-
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
@@ -11,156 +9,167 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<meta name="description" content="Landing page for the form wizard.">
-		<meta name="author" content="joseph.burris@gmail.com (place-holder)">
-		<title>Wizard &#8212; Form Wizard Using J2EE &amp; Custom Tags</title>
-		<link rel="icon" href="./images/wizard_hat.svg">
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap-icons.css">
-		<link rel="stylesheet" type="text/css" href="./css/site.css">
-		<link rel="stylesheet" type="text/css" href="./css/wallflowertech-theme.css">
-		<link rel="stylesheet" type="text/css" href="./css/wallflowertech-link-button.css">
+		<meta name="description" content="Landing page for Corner Dogs, a Jakarta EE hot dog ordering wizard demo.">
+		<meta name="author" content="Joseph Burris">
+		<title>Corner Dogs</title>
+		<link rel="icon" type="image/png" href="./images/cornerdogs-icon.png">
+		<link rel="preload" as="image" href="./images/cornerdogs-logo.png">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="./styles.css?v=1">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJPV8D9JB"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-0RJPV8D9JB');
+		</script>
 	</head>
 	<body>
-		<header class="container my-4">
-			<a class="link-primary d-flex align-items-center text-decoration-none" href="#" title="Form Wizard Using J2EE &amp; Custom Tags">
-				<img src="./images/wizard_hat.svg" alt="Wizard Hat" width="75"/>
-				<span class="fs-5 ps-4">Wizard &#8212; Form Wizard Using J2EE &amp; Custom Tags</span>
-			</a>
-			<hr>
-		</header>
 		<main>
-			<section class="container mx-auto p-4">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="fs-5">
-							At several points in my career I&apos;ve built &apos;wizard&apos; style sites &#8212;
-							requesting information from clients via rolling pages, each page focusing on a specific
-							area of interest. With each site, no matter the supporting framework, my design evolved
-							into a simple, stream-lined template.
+			<section class="hero-section">
+				<div class="container hero-content">
+					<div class="hero-copy">
+						<img class="hero-logo" src="./images/cornerdogs-logo.png" alt="Corner Dogs logo">
+						<p class="eyebrow">Jakarta EE portfolio demo</p>
+						<h1>Corner Dogs</h1>
+						<p class="lead">
+							A playful hot dog counter built to demonstrate a practical multi-step web wizard: customer intake,
+							order details, verification, validation, session flow, and a clean Tomcat 11 deployment path.
 						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12 col-md-8">
-						<p class="fs-5">
-							Client side, the site provides convenient features:
-						</p>
-						<ul>
-							<li>Pages are navigable with next and previous buttons.</li>
-							<li>Validation is available for required questions.</li>
-							<li>Breadcrumbs are available for page history.</li>
-							<li>Modern Bootstrap front-end for responsive HTML.</li>
-						</ul>
-						<p class="fs-5">
-							Structurally, the site relies on session management and a strong MVC pattern:
-						</p>
-						<ul>
-							<li>Robust Objects with comprehensive instance methods.</li>
-							<li>Fragments and custom tags for common information in the views.</li>
-							<li>Simple controllers managing logic flow and traffic.</li>
-							<li>Absent persistence strategy allowing for customization.</li>
-						</ul>
-					</div>
-					<div class="d-none col-md-4 d-md-inline">
-						<p class="text-center">
-							<img src="./images/wizard_wand.svg" alt="Wizard Wand" width="60%"/>
-						</p>
-					</div>
-				</div>
-					<div class="row">
-						<div class="col-12">
-							<p class="fs-5">
-								This version of the template is written with J2EE APIs for adaptiblility to a Java-based
-								framework. If you find it useful, tell me about it!
-							</p>
+						<div class="hero-actions">
+							<a class="btn btn-secondary btn-lg" href="http://localhost:8080/cornerdogs/" title="Open the local Corner Dogs demo." target="_blank">
+								<span class="bi bi-box-arrow-up-right pe-1" aria-hidden="true"></span>Open Demo
+							</a>
+							<button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#projectDetails">
+								<span class="bi bi-info-circle pe-1" aria-hidden="true"></span>Project Details
+							</button>
 						</div>
 					</div>
-				<div class="row">
-					<div class="col-12">
-							<p class="fs-5">
-								Try it:
-								<a class="link-primary" href="http://localhost:8180/Cupids" title="Click to see the wizard template in a sample project." target="_blank">Cupids Sample Project</a>
-							</p>
-							<p class="fs-5">
-								Download: <a class="link-primary" href="./resources/Cupids.zip" title="Click to download the wizard template in the sample.">Cupids.zip</a>
-							</p>
+				</div>
+			</section>
+			<section class="container mx-auto px-4 py-5">
+				<div class="feature-strip" aria-label="Corner Dogs highlights">
+					<div>
+						<span class="bi bi-signpost-split" aria-hidden="true"></span>
+						<h2>Guided Flow</h2>
+						<p>Moves visitors through focused pages with next, previous, cancel, and verification actions.</p>
+					</div>
+					<div>
+						<span class="bi bi-ui-checks" aria-hidden="true"></span>
+						<h2>Validated Forms</h2>
+						<p>Checks names, quantities, order location, and confirmation choices before continuing.</p>
+					</div>
+					<div>
+						<span class="bi bi-server" aria-hidden="true"></span>
+						<h2>Modern Runtime</h2>
+						<p>Runs as a Jakarta Servlet/JSP application packaged for Apache Tomcat 11.</p>
+					</div>
+				</div>
+				<div class="row align-items-center section-band">
+					<div class="col-lg-6 p-4">
+						<h2>A Small App With Real Web Patterns</h2>
+						<p>
+							Corner Dogs turns a fictional hot dog order into a compact demonstration of server-rendered Java web
+							application structure. The order flow collects a customer name, asks where the order will be taken,
+							captures hot dog quantities, calculates totals, and then presents the visitor with a final verification step.
+						</p>
+						<p>
+							The submit action is intentionally demo-only. No order is persisted, emailed, charged, or sent to a
+							restaurant system, so the project stays safe to explore while still showing how the pieces fit together.
+						</p>
+					</div>
+					<div class="col-lg-6 p-4">
+						<div class="demo-board" aria-label="Corner Dogs order flow">
+							<div>
+								<span class="bi bi-person" aria-hidden="true"></span>
+								<strong>Customer</strong>
+								<small>Name intake</small>
+							</div>
+							<div>
+								<span class="bi bi-receipt" aria-hidden="true"></span>
+								<strong>Order</strong>
+								<small>Location and quantities</small>
+							</div>
+							<div>
+								<span class="bi bi-check2-circle" aria-hidden="true"></span>
+								<strong>Verify</strong>
+								<small>Review before submit</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row align-items-center section-band">
+					<div class="col-lg-5 p-4">
+						<img src="./images/cornerdogs-icon.png" alt="Corner Dogs hot dog icon." class="feature-image">
+					</div>
+					<div class="col-lg-7 p-4">
+						<h2>Built For Clear Demonstration</h2>
+						<p>
+							The project shows a traditional MVC-style servlet application with JSP views, reusable fragments, custom
+							form tags, typed model objects, breadcrumbs, and Log4j-backed runtime logging. Maven owns the repeatable
+							build, while Eclipse Dynamic Web Project metadata remains available for local development.
+						</p>
+						<p class="note-block">
+							<span class="note-label">Runtime</span>
+							Java 17 or newer, Jakarta Servlet 6.1, JSP 4.0, Apache Tomcat 11, and Log4j 2.26.0.
+						</p>
+					</div>
+				</div>
+				<div class="row section-band">
+					<div class="col-12 p-4 section-intro">
+						<h2>What To Look For</h2>
+						<p>
+							Corner Dogs is intentionally modest in scope, which makes the architecture easy to inspect. It is a
+							useful reference for validating form pages, carrying state through a session-backed wizard, and keeping
+							the final submit path honest about what the demo does and does not do.
+						</p>
+					</div>
+				</div>
+				<div class="row callout-grid">
+					<div class="col-lg-4 mb-4">
+						<div class="card callout-card">
+							<div class="card-body">
+								<span class="bi bi-diagram-3" aria-hidden="true"></span>
+								<h3>Servlet Controllers</h3>
+								<p>Page-specific servlets coordinate navigation and model updates while keeping JSPs focused on rendering.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 mb-4">
+						<div class="card callout-card">
+							<div class="card-body">
+								<span class="bi bi-tags" aria-hidden="true"></span>
+								<h3>Custom Tags</h3>
+								<p>Reusable tags render common form controls, making validation messages and field markup consistent.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 mb-4">
+						<div class="card callout-card">
+							<div class="card-body">
+								<span class="bi bi-terminal" aria-hidden="true"></span>
+								<h3>Maven Packaging</h3>
+								<p>The app builds into <code>target/cornerdogs.war</code> for repeatable deployment to Tomcat.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
-		<section class="container contact p-4">
-			<div class="row">
-				<form class="was-validated" onsubmit="return send()">
-					<div class="col-12">
-						<input type="hidden" name="uid" value="w">
-						<h2>Contact Us</h2>
-						<p>
-							Have comments or suggestions? Or if you&#39;re interested in contributing an enhancement,
-							then contact us:
-						</p>
-					</div>
-					<div class="col-12 col-md-8">
-						<div class="form-floating my-4">
-							<input type="email" class="form-control form-control-md rounded-3" id="address" maxlength="150" placeholder="name@example.com" name="address" required>
-							<label for="address">Enter email</label>
-							<div class="valid-feedback">Valid.</div>
-							<div class="invalid-feedback">Please fill out this field.</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="form-floating my-4">
-							<textarea class="form-control rounded-3" rows="5" id="message" placeholder="" name="message" required></textarea>
-							<label for="message">Enter your comments</label>
-							<p id="messageCharsRemaining">
-								You have 2000 characters remaining.
-							</p>
-							<div class="valid-feedback">Valid.</div>
-							<div class="invalid-feedback">Please fill out this field.</div>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="py-4">
-							<button type="submit" class="btn btn-lg btn-primary float-end"><span class="bi bi-send pe-1" aria-hidden="true"></span>Send Email</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</section>
 		<footer class="w-100 mx-auto p-4 text-center">
 			<ul class="w-100 list-inline my-2 d-inline-block">
 				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="mailto:joseph.burris@gmail.com" title="Contact Wallflower Tech, L.L.C."><span class="bi bi-2x bi-envelope me-2" aria-hidden="true"></span></a>
+					<a class="link-primary" href="mailto:hello@all9ssolutions.com?subject=Corner%20Dogs" title="Contact all9s Solutions LLC"><span class="bi bi-2x bi-envelope me-2" aria-hidden="true"></span></a>
 				</li>
 				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://facebook.com/joseph.burris" title="Facebook" target="_blank"><span class="bi bi-2x bi-facebook me-2" aria-hidden="true"></span></a>
+					<a class="link-primary" href="https://www.linkedin.com/in/joseph-burris-5a13ba409" title="LinkedIn" target="_blank"><span class="bi bi-2x bi-linkedin me-2" aria-hidden="true"></span></a>
 				</li>
 				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="@joseph.burris" title="Twitter"><span class="bi bi-2x bi-twitter me-2" aria-hidden="true"></span></a>
-				</li>
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://instagram.com/joseph.burris" title="Instagram" target="_blank"><span class="bi bi-2x bi-instagram me-2" aria-hidden="true"></span></a>
-				</li>
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://pinterest.com/joseph.burris" title="Pinterest" target="_blank"><span class="bi bi-2x bi-pinterest me-2" aria-hidden="true"></span></a>
-				</li>
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://youtube.com/joseph.burris" title="YouTube" target="_blank"><span class="bi bi-2x bi-youtube me-2" aria-hidden="true"></span></a>
-				</li>
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://linkedin.com/joseph.burris" title="LinkedIn" target="_blank"><span class="bi bi-2x bi-linkedin me-2" aria-hidden="true"></span></a>
-				</li>
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://github.com/joseph.burris" title="GitHub" target="_blank"><span class="bi bi-2x bi-github me-2" aria-hidden="true"></span></a>
+					<a class="link-primary" href="https://github.com/josephburris9999/projects" title="GitHub" target="_blank"><span class="bi bi-2x bi-github me-2" aria-hidden="true"></span></a>
 				</li>
 			</ul>
 			<ul class="w-100 list-inline my-2 d-inline-block">
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="http://localhost/portfolio/index.html" title="Visit My Home" target="_blank"><span class="bi bi-2x bi-house-fill me-2" aria-hidden="true"></span><span class="fs-7">Home</span></a>
-				</li>
-				<li class="list-inline-item mb-1 me-3">
-					<a class="link-primary" href="./about.html" title="About Us" target="_blank"><span class="bi bi-2x bi-text-left me-2" aria-hidden="true"></span><span class="fs-7">About</span></a>
-				</li>
 				<li class="list-inline-item mb-1 me-3">
 					<a class="link-primary" href="./termsofuse.html" title="Terms Of Use" target="_blank"><span class="bi bi-2x bi-text-paragraph me-2" aria-hidden="true"></span><span class="fs-7">Terms</span></a>
 				</li>
@@ -169,45 +178,35 @@
 				</li>
 			</ul>
 			<small class="w-100 my-2 fs-7 d-inline-block">
-				Copyright &copy; 2024 <a class="link-primary" href="http://localhost:9091/" target="_blank">Wallflower Tech, L.L.C.</a>, all rights reserved.
+				Copyright &copy; 2026 <a class="link-primary" href="https://all9ssolutions.com/" target="_blank">all9s Solutions LLC</a>, all rights reserved.
 			</small>
 		</footer>
-		<div class="modal fade" id="tryit">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content bg-dark">
-					<div class="modal-header">
-						<h4 class="modal-title">Sorry!</h4>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-					</div>
-					<div class="modal-body">
-						<p class="lead">
-							The content we offered is currently unavailable. Check back soon!
-						</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal fade" id="response">
+		<div class="modal fade" id="projectDetails">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Wallflower Tech Response</h4>
+						<h4 class="modal-title">Corner Dogs Project Details</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 					</div>
 					<div class="modal-body">
-						<p class="response-text"></p>
+						<p>
+							Corner Dogs is a portfolio demonstration application by Joseph Burris, all9s Solutions LLC. It was
+							migrated from an older Java EE / Java 8 Dynamic Web Project to Jakarta EE for Tomcat 11.
+						</p>
+						<p>
+							The app demonstrates wizard navigation, JSP rendering, servlet controllers, custom form tags,
+							session-backed state, validation, and demo-only order submission.
+						</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+						<a class="btn btn-site-danger" href="https://github.com/josephburris9999/projects/tree/main/cornerdogs" target="_blank">
+							<span class="bi bi-github pe-1" aria-hidden="true"></span>Source
+						</a>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="./js/jquery.min.js"></script>
-		<script type="text/javascript" src="./js/popper.min.js"></script>
-		<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
-		<script type="text/javascript" src="./js/main.js"></script>
+		<script src="./main.js?v=1"></script>
 	</body>
 </html>
