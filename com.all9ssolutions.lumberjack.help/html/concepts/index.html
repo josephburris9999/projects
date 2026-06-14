@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Concepts</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+	</head>
+	<body>
+		<div>
+			<h2 id="lj_concepts">Concepts</h2>
+			<h3 id="lj_problem">The Problem</h3>
+			<p>
+				The practice of including logging statements in an application is, at best, a tedious
+				task. Once code has been written, logging states the logic and values in the flow,
+				essentially describing the program's behavior. It is a valuable practice especially
+				when the application is a GUI installed on individual devices or a web application
+				deployed in a different environment than the development environment. Well-formed
+				logging may reduce identifying and repairing a bug from days to minutes. And yet,
+				many programmers do not enjoy implementing logging.
+			</p>
+			<h3 id="lj_solution">The Solution</h3>
+			<p>
+				The solution? Lumberjack! Lumberjack is an Eclipse plug-in designed to generate
+				logging statements to add to Java classes. This plug-in is compiled with Java 11 and
+				begins its support in Luna 4.4.1. There are no known conflicts between the Lumberjack
+				plug-in and others.
+			</p>
+			<h3 id="lj_opportunities">Opportunities</h3>
+			<p>
+				Lumberjack presents a couple of opportunities in conjunction with generating logging:
+			</p>
+			<ul>
+				<li>
+					A programming shop may use Lumberjack to maintain a simple, uniform standard for 
+					logging. The practice of logging is most useful when a scheme is developed and
+					implemented in both single applications and in multiple application systems.
+				</li>
+				<li>
+					A programming shop may mandate a logging scheme for their coders. With basic
+					configuration, Lumberjack makes it easy to adopt a logging scheme across all
+					development environments.
+				</li>
+			</ul>
+			<h3 id="lj_limitations">Limitations</h3>
+			<p>
+				Lumberjack does not attempt to log every part of a class with the unique statements
+				required for useful logging. Instead this plug-in inserts statements throughout code
+				at opportune points as configured by the preferences. After generation, these
+				statements should be reviewed and edited to maximize usefulness.
+			</p>
+			<p>
+				Since logging framework syntax is generally similar, Lumberjack has opted to limit
+				the number of the supported logging frameworks to the following:
+			</p>
+			<ul>
+				<li>java.util.Logging</li>
+				<li>Log4j</li>
+				<li>Apache Commons Logging</li>
+			</ul>
+			<h3 id="lj_caution">Caution</h3>
+			<p style="margin-bottom:5rem;">
+				Lumberjack generates new logging statements and inserts them in existing code. These
+				statements will not replace or overwrite existing logging statements (see
+				<a href="../todos/index.html#return_comments" title="Click to read about lost comments.">Lost Comments</a>).
+				This means if Lumberjack is run more than once, identical logging statements will be
+				generated for each execution.
+			</p>
+		</div>
+	</body>
+</html>

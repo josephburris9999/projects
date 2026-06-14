@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Getting Started</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+	</head>
+	<body>
+		<div>
+			<h2 id="lj_getting_started">Getting Started</h2>
+			<p>
+				The Lumberjack plug-in interface is a wizard to interact with programmers. As with
+				any wizard, pages are available to communicate with the programmer prior to generating
+				logging statements. The following links explain how to get started with Lumberjack:
+			</p>
+			<ul>
+				<li>
+					<a href="#lj_wizard" title="Click to learn how to access Lumberjack.">The Wizard</a>
+				</li>
+				<li>
+					<a href="#lj_selections" title="Click to understand the selections page.">Selections Page</a>
+				</li>
+				<li>
+					<a href="#lj_preview" title="Click to understand the preview page.">Preview Page</a>
+				</li>
+			</ul>
+			<h3 id="lj_wizard">The Wizard</h3>
+			<p>
+				To understand the wizard it must first be opened. There are three points of access:
+			</p>
+			<ul style="list-style:none;">
+				<li>Use the keyboard short-cut&nbsp;&nbsp;Ctrl+Shift+L</li>
+				<li>Get the editor context menu and select the Lumberjack item</li>
+				<li>Click the tool bar icon&nbsp;&nbsp;<img alt="Lumberjack Axe" src="../../images/axe.png" height="16"></li>
+			</ul>
+			<p>
+				Each of these access points are available as long as there is a Java class in the
+				current editor.
+			</p>
+			<h3 id="lj_selections">Selections Page</h3>
+			<p>
+				The wizard opens to the selections page.
+			</p>
+			<div class="center">
+				<img alt="Lumberjack Wizard - Selections Page" src="../../images/selections_page.png" height="500">
+			</div>
+			<p>
+				This page has a tree view of classes and methods found in the Java class in the
+				current editor. Methods which should be examined for generated logging should be
+				selected. As a convenience, the root class element may be checked and will cause
+				its methods to be selected. Since multiple classes may exist in the same unit,
+				methods will appear as elements of the parent class.
+			</p>
+			<p>
+				To configure the logging statement preferences, select the Preferences.. button (see
+				the <a href="preferences.html" title="Click to read about lost comments.">Preferences</a>
+				documentation for more). Otherwise select either the Next button for the next wizard
+				page, or select the Finish button to run the Lumberjack operation.
+			</p>
+			<h3 id="lj_preview">Preview Page</h3>
+			<div class="center">
+				<img alt="Lumberjack Wizard - Preview Page" src="../../images/preview_page.png" height="500">
+			</div>
+			<p>
+				The preview page displays the Java class with the generated logging statements in a
+				side-by-side view. This view highlights the differences in the original versus the
+				modified unit. The changes may be altered or abandoned from this page, or select
+				the Finish button button to apply all changes to the editor.
+			</p>
+			<p style="margin-bottom:5rem;">
+				<b>Be sure to review all generated logging statements and edit the content as needed.</b>
+			</p>
+		</div>
+	</body>
+</html>

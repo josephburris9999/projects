@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+	'Copyright (c) 2024 all9s Solutions
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License 2.0, which is available at
+https://www.eclipse.org/legal/epl-2.0/
+SPDX-License-Identifier: EPL-2.0'
+-->
+<plugin>
+
+  <extension point="org.eclipse.ui.commands">
+   <category name="%category.name"
+     id="com.all9ssolutions.lumberjack.commands.category"/>
+   <command name="%command.name"
+     categoryId="com.all9ssolutions.lumberjack.commands.category"
+     id="com.all9ssolutions.lumberjack.commands.lumberjackCommand"/>
+  </extension>
+  <extension point="org.eclipse.ui.commandImages">
+    <image
+      commandId="com.all9ssolutions.lumberjack.commands.lumberjackCommand"
+      icon="icons/axe.png"/>
+  </extension>
+  <extension point="org.eclipse.ui.handlers">
+    <handler commandId="com.all9ssolutions.lumberjack.commands.lumberjackCommand"
+      class="com.all9ssolutions.lumberjack.handlers.Handler"/>
+  </extension>
+  <extension point="org.eclipse.ui.bindings">
+    <key commandId="com.all9ssolutions.lumberjack.commands.lumberjackCommand"
+      contextId="org.eclipse.jdt.ui.javaEditorScope"
+      sequence="M1+M2+L"
+      schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+  </extension>
+  <extension point="org.eclipse.ui.menus">
+    <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+      <toolbar id="com.all9ssolutions.lumberjack.toolbars.LumberjackToolbar">
+        <command commandId="com.all9ssolutions.lumberjack.commands.lumberjackCommand"
+          icon="icons/axe.png"
+          tooltip="%command.tooltip"
+          id="com.all9ssolutions.lumberjack.toolbars.lumberjackCommand">
+          <visibleWhen checkEnabled="false">
+            <reference definitionId="when.java.is.active" />
+          </visibleWhen>
+        </command>
+      </toolbar>
+    </menuContribution>
+    <menuContribution locationURI="popup:org.eclipse.ui.popup.any"
+      allPopups="false">
+      <command label="%command.label"
+        style="push"
+        commandId="com.all9ssolutions.lumberjack.commands.lumberjackCommand"
+        icon="icons/axe.png">
+        <visibleWhen checkEnabled="false">
+          <reference definitionId="when.java.is.active" />
+        </visibleWhen>
+      </command>
+    </menuContribution>
+  </extension>
+  <extension point="org.eclipse.core.expressions.definitions">
+    <definition id="when.java.is.active">
+      <with variable="activeContexts">
+        <iterate operator="or">
+          <equals value="org.eclipse.jdt.ui.javaEditorScope"/>
+        </iterate>
+      </with>
+    </definition>
+  </extension>
+  <extension point="org.eclipse.ui.preferencePages">
+    <page class="com.all9ssolutions.lumberjack.preferences.PreferencePage"
+      category="org.eclipse.ui.preferencePages.Workbench"
+      id="com.all9ssolutions.lumberjack.preferences.PreferencePage"
+      name="%preferences.page.title">
+      <keywordReference id="com.all9ssolutions.preferences.keywords.lumberjack"/>
+    </page>
+  </extension>
+  <extension point="org.eclipse.core.runtime.preferences">
+    <initializer class="com.all9ssolutions.lumberjack.preferences.PreferenceInitializer"/>
+  </extension>
+  <extension point="org.eclipse.ui.keywords">
+    <keyword label="%preferences.page.keywords"
+      id="com.all9ssolutions.preferences.keywords.lumberjack"/>
+  </extension>
+  <extension point="org.eclipse.equinox.preferences.preferences">
+  </extension>
+
+</plugin>

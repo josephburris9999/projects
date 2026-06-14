@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	'Copyright (c) 2024 all9s Solutions
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License 2.0, which is available at
+https://www.eclipse.org/legal/epl-2.0/
+SPDX-License-Identifier: EPL-2.0'
+-->
+<feature
+      id="com.all9ssolutions"
+      label="%Bundle-Name"
+      version="1.0.0.qualifier"
+      provider-name="%Bundle-Vendor"
+      plugin="com.all9ssolutions.branding">
+
+   <description>
+      %feature.description
+   </description>
+
+   <copyright>
+      %feature.copyright
+   </copyright>
+
+   <license url="%feature.license.url">
+      %feature.license
+   </license>
+
+   <url>
+      <update label="all9s Solutions" url="file:/D:/Workspaces/projects/com.all9ssolutions.update/"/>
+   </url>
+
+   <includes
+         id="com.all9ssolutions.ender"
+         version="0.0.0"
+         name="Ender Feature"/>
+
+   <includes
+         id="com.all9ssolutions.lumberjack"
+         version="0.0.0"
+         name="Lumberjack Feature"/>
+
+   <plugin
+         id="com.all9ssolutions.branding"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

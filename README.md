@@ -1,32 +1,47 @@
-# Portfolio Projects
+# all9s Solutions Eclipse Tools
 
-This repository contains portfolio projects built with HTML5, CSS3, and Bootstrap 5.
+This workspace contains Eclipse plug-ins, features, and a local p2 update site for Java editor productivity tools from all9s Solutions.
 
-## Files
+## Projects
 
-- `index.html` - Root project index page.
-- `resume/index.html` - Responsive resume page.
-- `resume/styles.css` - Custom resume styles layered on top of Bootstrap.
-- `resume/assets/` - Optional folder for images, a downloadable PDF, or other resume assets.
+- `com.all9ssolutions.branding` - shared branding bundle used by the top-level feature.
+- `com.all9ssolutions.ender` - adds configurable ending comments to Java methods and control blocks.
+- `com.all9ssolutions.ender.feature` - installable Ender feature metadata.
+- `com.all9ssolutions.lumberjack` - generates configurable Java logging statements.
+- `com.all9ssolutions.lumberjack.feature` - installable Lumberjack feature metadata.
+- `com.all9ssolutions.lumberjack.help` - Eclipse help content for Lumberjack.
+- `com.all9ssolutions.feature` - top-level feature that includes the tool features and branding bundle.
+- `com.all9ssolutions.update` - generated p2 update site.
 
-## Local Preview
+## Requirements
 
-Open `index.html` in a browser to preview the project index. The resume is available from the index page or directly at `resume/index.html`.
+- Eclipse IDE with PDE installed for development.
+- Java 11 compatibility for the plug-in source and generated bundles.
+- Eclipse Marketplace listings should reference the published p2 update-site URL and the feature IDs exposed by that update site.
 
-## GitHub Pages Deployment
+## Local Install Test
 
-1. Push this repository to GitHub.
-2. Open the repository settings.
-3. Go to **Pages**.
-4. Set the source to **Deploy from a branch**.
-5. Choose the `main` branch and the `/root` folder.
-6. Save the settings.
+1. Open Eclipse.
+2. Select `Help > Install New Software...`.
+3. Add the local update site: `file:/D:/Workspaces/projects/com.all9ssolutions.update/`.
+4. Select the `all9s Solutions` category and install the available features.
+5. Restart Eclipse when prompted.
+6. Open a Java source file and verify the Ender and Lumberjack toolbar, editor context-menu, and keyboard-command entries.
 
-After GitHub Pages finishes publishing, the project index will be available at the Pages URL shown in the repository settings. The resume will be available under `/resume/`.
+## Feature IDs
 
-## Next Steps
+- `com.all9ssolutions`
+- `com.all9ssolutions.ender`
+- `com.all9ssolutions.lumberjack`
 
-- Replace placeholder contact information.
-- Add real experience, projects, skills, and education.
-- Add a downloadable PDF version in the `resume/assets/` folder.
-- Customize the colors and spacing in `resume/styles.css`.
+## Release Checklist
+
+- Regenerate `com.all9ssolutions.update` from the source plug-in and feature projects.
+- Install from a clean Eclipse profile using the generated p2 update site.
+- Confirm toolbar icons, editor context-menu icons, commands, preferences, and help content.
+- Publish the p2 update site to a stable HTTPS location before submitting Eclipse Marketplace entries.
+- Use the feature IDs above in Marketplace metadata.
+
+## License
+
+Licensed under the Eclipse Public License 2.0. See `LICENSE`.

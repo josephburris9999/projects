@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	'Copyright (c) 2024 all9s Solutions
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License 2.0, which is available at
+https://www.eclipse.org/legal/epl-2.0/
+SPDX-License-Identifier: EPL-2.0'
+-->
+<site>
+   <description name="all9s Solutions" url="file:/D:/Workspaces/projects/com.all9ssolutions.update/">
+      Eclipse plug-ins from all9s Solutions for Java editor productivity.
+   </description>
+   <feature url="features/com.all9ssolutions_1.0.0.202606141543.jar" id="com.all9ssolutions" version="1.0.0.202606141543">
+      <category name="com.all9ssolutions.category"/>
+   </feature>
+   <category-def name="com.all9ssolutions.category" label="all9s Solutions Category">
+      <description>
+         Contains features for all9s Solutions
+      </description>
+   </category-def>
+</site>

@@ -1,3 +1,11 @@
 /.metadata/
 /.sonarlint/
 Servers/
+bin/
+*/bin/
+target/
+*/target/
+.build/
+.lint/
+.DS_Store
+Thumbs.db

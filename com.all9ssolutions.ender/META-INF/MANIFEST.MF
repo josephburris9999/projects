@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: com.all9ssolutions.ender;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.all9ssolutions.ender.Activator
+Bundle-Vendor: %Bundle-Vendor
+Bundle-License: https://www.eclipse.org/legal/epl-2.0/;
+ description="Eclipse Public License 2.0"
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.jdt.core;bundle-version="3.10.0",
+ org.eclipse.jdt.core.manipulation;bundle-version="1.5.0",
+ org.eclipse.jdt.ui;bundle-version="3.10.1",
+ org.eclipse.ltk.core.refactoring;bundle-version="3.6.101",
+ org.eclipse.text;bundle-version="3.5.300",
+ org.eclipse.ui;bundle-version="3.106.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: com.all9ssolutions.ender
+Bundle-ActivationPolicy: lazy
+Export-Package: com.all9ssolutions.ender,
+ com.all9ssolutions.ender.actions,
+ com.all9ssolutions.ender.business,
+ com.all9ssolutions.ender.handlers
