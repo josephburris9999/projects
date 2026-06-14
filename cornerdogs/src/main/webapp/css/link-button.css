@@ -1,0 +1,119 @@
+/*
+ * Standard link and button css.
+ * @author Joseph Burris, all9s Solutions LLC
+ */
+
+:root {
+	--primary-color:rgb(255,250,232);
+	--primary-color-hover:rgb(255,237,185);
+	--primary-bg-color:rgb(12,87,45);
+	--primary-bg-color-hover:rgb(5,48,28);
+	--primary-bdr-color:rgb(12,87,45);
+	--primary-bdr-color-hover:rgb(5,48,28);
+	--primary-shadow-color:rgba(12,87,45,.28);
+
+	--secondary-color:rgb(5,48,28);
+	--secondary-color-hover:rgb(12,87,45);
+	--secondary-bg-color:rgb(255,255,255);
+	--secondary-bg-color-hover:rgb(255,237,185);
+	--secondary-bdr-color:rgb(255,255,255);
+	--secondary-bdr-color-hover:rgb(255,237,185);
+	--secondary-shadow-color:rgba(12,87,45,.2)
+}
+
+a.link-primary,a.link-primary:focus,a.link-primary:visited{
+	color:var(--secondary-color);
+	text-decoration:underline
+}
+
+a.link-primary:hover{
+	color:var(--secondary-color-hover);
+	text-decoration:none
+}
+
+a.link-secondary,a.link-secondary:focus,a.link-secondary:visited{
+	color:var(--primary-color);
+	text-decoration:underline
+}
+
+a.link-secondary:hover{
+	color:var(--primary-color-hover);
+	text-decoration:none
+}
+
+.btn-primary,
+a.btn-primary,
+a.btn-primary:visited{
+	color:var(--primary-color);
+	background-color:var(--primary-bg-color);
+	border-color:var(--primary-bdr-color);
+	border-radius:999px;
+	font-weight:800;
+	box-shadow:0 .75rem 1.5rem rgba(12,87,45,.18)
+}
+
+.btn-primary:hover,
+a.btn-primary:hover{
+	color:var(--primary-color-hover);
+	background-color:var(--primary-bg-color-hover);
+	border-color:var(--primary-bdr-color-hover)
+}
+
+.btn-check:focus + .btn-primary,.btn-primary:focus,
+a.btn-primary:focus{
+	color:var(--primary-color);
+	background-color:var(--primary-bg-color);
+	border-color:var(--primary-bdr-color);
+	box-shadow:0 0 0 0.25rem var(--primary-shadow-color)
+}
+
+.btn-check:checked + .btn-primary,.btn-check:active + .btn-primary,.btn-primary:active,.btn-primary.active,.show > .btn-primary.dropdown-toggle{
+	color:var(--primary-color);
+	background-color:var(--primary-bg-color);
+	border-color:var(--primary-bdr-color)
+}
+
+.btn-check:checked + .btn-primary:focus,.btn-check:active + .btn-primary:focus,.btn-primary:active:focus,.btn-primary.active:focus,.show > .btn-primary.dropdown-toggle:focus{
+	box-shadow:0 0 0 0.25rem var(--primary-shadow-color)
+}
+
+.btn-primary:disabled,.btn-primary.disabled{
+	color:var(--primary-bdr-color);
+	background-color:var(--primary-bdr-color-hover);
+	border-color:var(--primary-bdr-color-hover)
+}
+
+.btn-secondary{
+	color:var(--secondary-color);
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color)
+}
+
+.btn-secondary:hover{
+	color:var(--secondary-color-hover);
+	background-color:var(--secondary-bg-color-hover);
+	border-color:var(--secondary-bdr-color-hover)
+}
+
+.btn-check:focus + .btn-secondary,.btn-secondary:focus{
+	color:var(--secondary-color);
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color);
+	box-shadow:0 0 0 0.25rem var(--secondary-shadow-color)
+}
+
+.btn-check:checked + .btn-secondary,.btn-check:active + .btn-secondary,.btn-secondary:active,.btn-secondary.active,.show > .btn-secondary.dropdown-toggle{
+	color:var(--secondary-color);
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color)
+}
+
+.btn-check:checked + .btn-secondary:focus,.btn-check:active + .btn-secondary:focus,.btn-secondary:active:focus,.btn-secondary.active:focus,.show > .btn-secondary.dropdown-toggle:focus{
+	box-shadow:0 0 0 0.25rem var(--secondary-shadow-color)
+}
+
+.btn-secondary:disabled,.btn-secondary.disabled{
+	color:var(--secondary-bdr-color);
+	background-color:var(--secondary-bdr-color-hover);
+	border-color:var(--secondary-bdr-color-hover)
+}

@@ -1,0 +1,5 @@
+/build/
+/target/
+/.tools/
+/.settings/org.eclipse.m2e.core.prefs
+/src/main/webapp/WEB-INF/lib/*.jar

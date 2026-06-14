@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_4_0.xsd"
+	version="4.0">
+	<tlib-version>1.0</tlib-version>
+	<short-name>custom-tags</short-name>
+	<tag>
+		<description>
+			Renders a radio button in HTML format, linked to the value held in an application model.
+		</description>
+		<name>radio</name>
+		<tag-class>com.all9ssolutions.wizard.tags.RenderRadioButtonTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				The unique ID for the radio button option.
+			</description>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The label for the radio button options.
+			</description>
+			<name>label</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The name to be used as the value of the &apos;name&apos; attribute.
+			</description>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The value to be used as the value of the &apos;value&apos; attribute.
+			</description>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The error to be used as the value of the &apos;error&apos; attribute.
+			</description>
+			<name>error</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			Renders a checkbox in HTML format, linked to the value held in an application model.
+		</description>
+		<name>checkbox</name>
+		<tag-class>com.all9ssolutions.wizard.tags.RenderCheckboxTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				The unique ID for the checkbox option.
+			</description>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The label for the checkbox option.
+			</description>
+			<name>label</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The name to be used as the value of the &apos;name&apos; attribute.
+			</description>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The value to be used as the value of the &apos;value&apos; attribute.
+			</description>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The error to be used as the value of the &apos;error&apos; attribute.
+			</description>
+			<name>error</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			Renders a select input in HTML format, linked to an enum with a value held in an application model.
+		</description>
+		<name>select</name>
+		<tag-class>com.all9ssolutions.wizard.tags.RenderSelectTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				The unique ID for the select input.
+			</description>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The label for the select option.
+			</description>
+			<name>label</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The name to be used as the value of the &apos;name&apos; attribute.
+			</description>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The value to be used as the value of the &apos;value&apos; attribute.
+			</description>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The qualified path of the enum to be used for backing information.
+			</description>
+			<name>qualifiedPath</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The error to be used as the value of the &apos;error&apos; attribute.
+			</description>
+			<name>error</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			Renders a text input field in HTML format, linked to a value held in an application model.
+		</description>
+		<name>text</name>
+		<tag-class>com.all9ssolutions.wizard.tags.RenderTextInputTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				The unique ID for the text input option.
+			</description>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The label for the text input options.
+			</description>
+			<name>label</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The type to be used as the value of the &apos;type&apos; attribute.
+			</description>
+			<name>type</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The name to be used as the value of the &apos;name&apos; attribute.
+			</description>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>
+				The value to be used as the value of the &apos;value&apos; attribute.
+			</description>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Object</type>
+		</attribute>
+		<attribute>
+			<description>
+				The error to be used as the value of the &apos;error&apos; attribute.
+			</description>
+			<name>error</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+</taglib>

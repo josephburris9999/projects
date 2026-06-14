@@ -1,0 +1,213 @@
+<!--
+	Wizard landing page.
+	Includes contact section and standard footer.
+	@author joseph.burris@gmail.com (place-holder)
+-->
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="description" content="Landing page for the form wizard.">
+		<meta name="author" content="joseph.burris@gmail.com (place-holder)">
+		<title>Wizard &#8212; Form Wizard Using J2EE &amp; Custom Tags</title>
+		<link rel="icon" href="./images/wizard_hat.svg">
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap-icons.css">
+		<link rel="stylesheet" type="text/css" href="./css/site.css">
+		<link rel="stylesheet" type="text/css" href="./css/wallflowertech-theme.css">
+		<link rel="stylesheet" type="text/css" href="./css/wallflowertech-link-button.css">
+	</head>
+	<body>
+		<header class="container my-4">
+			<a class="link-primary d-flex align-items-center text-decoration-none" href="#" title="Form Wizard Using J2EE &amp; Custom Tags">
+				<img src="./images/wizard_hat.svg" alt="Wizard Hat" width="75"/>
+				<span class="fs-5 ps-4">Wizard &#8212; Form Wizard Using J2EE &amp; Custom Tags</span>
+			</a>
+			<hr>
+		</header>
+		<main>
+			<section class="container mx-auto p-4">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="fs-5">
+							At several points in my career I&apos;ve built &apos;wizard&apos; style sites &#8212;
+							requesting information from clients via rolling pages, each page focusing on a specific
+							area of interest. With each site, no matter the supporting framework, my design evolved
+							into a simple, stream-lined template.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-8">
+						<p class="fs-5">
+							Client side, the site provides convenient features:
+						</p>
+						<ul>
+							<li>Pages are navigable with next and previous buttons.</li>
+							<li>Validation is available for required questions.</li>
+							<li>Breadcrumbs are available for page history.</li>
+							<li>Modern Bootstrap front-end for responsive HTML.</li>
+						</ul>
+						<p class="fs-5">
+							Structurally, the site relies on session management and a strong MVC pattern:
+						</p>
+						<ul>
+							<li>Robust Objects with comprehensive instance methods.</li>
+							<li>Fragments and custom tags for common information in the views.</li>
+							<li>Simple controllers managing logic flow and traffic.</li>
+							<li>Absent persistence strategy allowing for customization.</li>
+						</ul>
+					</div>
+					<div class="d-none col-md-4 d-md-inline">
+						<p class="text-center">
+							<img src="./images/wizard_wand.svg" alt="Wizard Wand" width="60%"/>
+						</p>
+					</div>
+				</div>
+					<div class="row">
+						<div class="col-12">
+							<p class="fs-5">
+								This version of the template is written with J2EE APIs for adaptiblility to a Java-based
+								framework. If you find it useful, tell me about it!
+							</p>
+						</div>
+					</div>
+				<div class="row">
+					<div class="col-12">
+							<p class="fs-5">
+								Try it:
+								<a class="link-primary" href="http://localhost:8180/Cupids" title="Click to see the wizard template in a sample project." target="_blank">Cupids Sample Project</a>
+							</p>
+							<p class="fs-5">
+								Download: <a class="link-primary" href="./resources/Cupids.zip" title="Click to download the wizard template in the sample.">Cupids.zip</a>
+							</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<section class="container contact p-4">
+			<div class="row">
+				<form class="was-validated" onsubmit="return send()">
+					<div class="col-12">
+						<input type="hidden" name="uid" value="w">
+						<h2>Contact Us</h2>
+						<p>
+							Have comments or suggestions? Or if you&#39;re interested in contributing an enhancement,
+							then contact us:
+						</p>
+					</div>
+					<div class="col-12 col-md-8">
+						<div class="form-floating my-4">
+							<input type="email" class="form-control form-control-md rounded-3" id="address" maxlength="150" placeholder="name@example.com" name="address" required>
+							<label for="address">Enter email</label>
+							<div class="valid-feedback">Valid.</div>
+							<div class="invalid-feedback">Please fill out this field.</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-floating my-4">
+							<textarea class="form-control rounded-3" rows="5" id="message" placeholder="" name="message" required></textarea>
+							<label for="message">Enter your comments</label>
+							<p id="messageCharsRemaining">
+								You have 2000 characters remaining.
+							</p>
+							<div class="valid-feedback">Valid.</div>
+							<div class="invalid-feedback">Please fill out this field.</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="py-4">
+							<button type="submit" class="btn btn-lg btn-primary float-end"><span class="bi bi-send pe-1" aria-hidden="true"></span>Send Email</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer class="w-100 mx-auto p-4 text-center">
+			<ul class="w-100 list-inline my-2 d-inline-block">
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="mailto:joseph.burris@gmail.com" title="Contact Wallflower Tech, L.L.C."><span class="bi bi-2x bi-envelope me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://facebook.com/joseph.burris" title="Facebook" target="_blank"><span class="bi bi-2x bi-facebook me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="@joseph.burris" title="Twitter"><span class="bi bi-2x bi-twitter me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://instagram.com/joseph.burris" title="Instagram" target="_blank"><span class="bi bi-2x bi-instagram me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://pinterest.com/joseph.burris" title="Pinterest" target="_blank"><span class="bi bi-2x bi-pinterest me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://youtube.com/joseph.burris" title="YouTube" target="_blank"><span class="bi bi-2x bi-youtube me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://linkedin.com/joseph.burris" title="LinkedIn" target="_blank"><span class="bi bi-2x bi-linkedin me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://github.com/joseph.burris" title="GitHub" target="_blank"><span class="bi bi-2x bi-github me-2" aria-hidden="true"></span></a>
+				</li>
+			</ul>
+			<ul class="w-100 list-inline my-2 d-inline-block">
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="http://localhost/portfolio/index.html" title="Visit My Home" target="_blank"><span class="bi bi-2x bi-house-fill me-2" aria-hidden="true"></span><span class="fs-7">Home</span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./about.html" title="About Us" target="_blank"><span class="bi bi-2x bi-text-left me-2" aria-hidden="true"></span><span class="fs-7">About</span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./termsofuse.html" title="Terms Of Use" target="_blank"><span class="bi bi-2x bi-text-paragraph me-2" aria-hidden="true"></span><span class="fs-7">Terms</span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./privacypolicy.html" title="Our Privacy Policy" target="_blank"><span class="bi bi-2x bi-key me-2" aria-hidden="true"></span><span class="fs-7">Privacy Policy</span></a>
+				</li>
+			</ul>
+			<small class="w-100 my-2 fs-7 d-inline-block">
+				Copyright &copy; 2024 <a class="link-primary" href="http://localhost:9091/" target="_blank">Wallflower Tech, L.L.C.</a>, all rights reserved.
+			</small>
+		</footer>
+		<div class="modal fade" id="tryit">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-dark">
+					<div class="modal-header">
+						<h4 class="modal-title">Sorry!</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<p class="lead">
+							The content we offered is currently unavailable. Check back soon!
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="response">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Wallflower Tech Response</h4>
+					</div>
+					<div class="modal-body">
+						<p class="response-text"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/popper.min.js"></script>
+		<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+	</body>
+</html>
