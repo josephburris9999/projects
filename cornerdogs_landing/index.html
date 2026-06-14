@@ -16,7 +16,7 @@
 		<link rel="preload" as="image" href="./images/cornerdogs-logo.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="./styles.css?v=1">
+		<link rel="stylesheet" href="./styles.css?v=19">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJPV8D9JB"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -29,21 +29,25 @@
 		<main>
 			<section class="hero-section">
 				<div class="container hero-content">
-					<div class="hero-copy">
-						<img class="hero-logo" src="./images/cornerdogs-logo.png" alt="Corner Dogs logo">
-						<p class="eyebrow">Jakarta EE portfolio demo</p>
-						<h1>Corner Dogs</h1>
-						<p class="lead">
-							A playful hot dog counter built to demonstrate a practical multi-step web wizard: customer intake,
-							order details, verification, validation, session flow, and a clean Tomcat 11 deployment path.
-						</p>
-						<div class="hero-actions">
-							<a class="btn btn-secondary btn-lg" href="http://localhost:8080/cornerdogs/" title="Open the local Corner Dogs demo." target="_blank">
-								<span class="bi bi-box-arrow-up-right pe-1" aria-hidden="true"></span>Open Demo
-							</a>
-							<button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#projectDetails">
-								<span class="bi bi-info-circle pe-1" aria-hidden="true"></span>Project Details
-							</button>
+					<div class="hero-layout">
+						<div class="hero-brand">
+							<img class="hero-logo" src="./images/cornerdogs-logo.png" alt="Corner Dogs logo">
+						</div>
+						<div class="hero-copy">
+							<p class="eyebrow">Jakarta EE portfolio demo</p>
+							<h1>Corner Dogs</h1>
+							<p class="lead">
+								A focused hot dog ordering demo built to demonstrate a practical multi-step web wizard: customer intake,
+								order details, verification, validation, session flow, and a clean Tomcat 11 deployment path.
+							</p>
+							<div class="hero-actions">
+								<button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#demoNotice">
+									<span class="bi bi-box-arrow-up-right pe-1" aria-hidden="true"></span>Open Demo
+								</button>
+								<button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#projectDetails">
+									<span class="bi bi-info-circle pe-1" aria-hidden="true"></span>Project Details
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -61,7 +65,7 @@
 						<p>Checks names, quantities, order location, and confirmation choices before continuing.</p>
 					</div>
 					<div>
-						<span class="bi bi-server" aria-hidden="true"></span>
+						<span class="bi bi-hdd-rack" aria-hidden="true"></span>
 						<h2>Modern Runtime</h2>
 						<p>Runs as a Jakarta Servlet/JSP application packaged for Apache Tomcat 11.</p>
 					</div>
@@ -201,6 +205,31 @@
 					<div class="modal-footer">
 						<a class="btn btn-site-danger" href="https://github.com/josephburris9999/projects/tree/main/cornerdogs" target="_blank">
 							<span class="bi bi-github pe-1" aria-hidden="true"></span>Source
+						</a>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="demoNotice">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Demo Deployment Notice</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<p>
+							The Corner Dogs demo is deployed on Render&#39;s free tier. If the service has been idle, Render may
+							need a little time to wake it before the page loads.
+						</p>
+						<p>
+							After continuing, please allow a short delay if the demo does not appear immediately.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<a class="btn btn-site-danger" href="https://cornerdogs.onrender.com">
+							<span class="bi bi-box-arrow-up-right pe-1" aria-hidden="true"></span>Continue
 						</a>
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 					</div>

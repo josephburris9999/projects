@@ -117,10 +117,7 @@ a.link-primary:hover{
 	position:relative;
 	min-height:clamp(31rem,74vh,45rem);
 	color:var(--bs-white);
-	background:
-		linear-gradient(90deg,rgba(22,24,20,.94),rgba(8,91,54,.82) 44%,rgba(125,24,17,.28)),
-		url("./images/cornerdogs-logo.png") no-repeat right 8% center;
-	background-size:auto, min(48vw,32rem);
+	background:linear-gradient(90deg,rgba(22,24,20,.94),rgba(8,91,54,.86) 44%,rgba(76,142,82,.62));
 	display:flex;
 	align-items:center;
 	overflow:hidden
@@ -141,16 +138,29 @@ a.link-primary:hover{
 	z-index:1
 }
 
+.hero-layout{
+	display:grid;
+	grid-template-columns:minmax(14rem,24rem) minmax(0,1fr);
+	align-items:center;
+	gap:clamp(2rem,6vw,5rem);
+	padding:4rem 0
+}
+
+.hero-brand{
+	display:flex;
+	align-items:center;
+	justify-content:flex-start
+}
+
 .hero-copy{
 	max-width:45rem;
-	padding:4rem 0
+	justify-self:end
 }
 
 .hero-logo{
 	display:block;
-	width:min(13rem,44vw);
+	width:min(24rem,100%);
 	height:auto;
-	margin-bottom:1.25rem;
 	filter:drop-shadow(0 1rem 1.4rem rgba(0,0,0,.32))
 }
 
@@ -180,7 +190,23 @@ a.link-primary:hover{
 	display:flex;
 	flex-wrap:wrap;
 	gap:.8rem;
+	justify-content:flex-end;
+	align-items:flex-start;
 	margin-top:1.75rem
+}
+
+.hero-actions .btn-secondary:hover,
+.hero-actions .btn-secondary:focus{
+	color:rgb(255,248,225);
+	background-color:transparent;
+	border-color:rgb(255,248,225)
+}
+
+.hero-actions .btn-outline-light:hover,
+.hero-actions .btn-outline-light:focus{
+	color:var(--secondary-color-hover);
+	background-color:rgb(255,248,225);
+	border-color:rgb(255,248,225)
 }
 
 .feature-strip{
@@ -396,10 +422,12 @@ a.link-primary:hover{
 
 @media (max-width:991.98px){
 	.hero-section{
-		background:
-			linear-gradient(90deg,rgba(22,24,20,.96),rgba(8,91,54,.86)),
-			url("./images/cornerdogs-logo.png") no-repeat right bottom;
-		background-size:auto, 18rem
+		background:linear-gradient(90deg,rgba(22,24,20,.96),rgba(8,91,54,.86))
+	}
+
+	.hero-layout{
+		grid-template-columns:minmax(7.5rem,32vw) minmax(0,1fr);
+		gap:1.25rem
 	}
 
 	.feature-strip,
@@ -413,6 +441,25 @@ a.link-primary:hover{
 }
 
 @media (max-width:575.98px){
+	.hero-layout{
+		grid-template-columns:1fr;
+		gap:1.5rem;
+		padding:3rem 0
+	}
+
+	.hero-brand{
+		justify-content:center
+	}
+
+	.hero-logo{
+		width:min(14rem,72vw)
+	}
+
+	.hero-copy{
+		justify-self:stretch;
+		text-align:left
+	}
+
 	.hero-section h1{
 		white-space:normal
 	}
