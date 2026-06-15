@@ -1,0 +1,158 @@
+<!--
+	all9s Solutions Eclipse Tools landing page.
+	@author Joseph Burris
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<meta name="description" content="Landing page for all9s Solutions Eclipse plug-ins for Java editor productivity.">
+		<meta name="author" content="Joseph Burris">
+		<meta property="og:title" content="all9s Solutions Eclipse Tools">
+		<meta property="og:description" content="Install Eclipse plug-ins that generate Java logging statements and ending comments from the editor.">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="./images/eclipse-tools-hero.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<title>all9s Solutions Eclipse Tools</title>
+		<link rel="icon" type="image/png" href="./images/eclipse-tools-puzzle.png">
+		<link rel="preload" as="image" href="./images/eclipse-tools-hero.png">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="./styles.css?v=4">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RJPV8D9JB"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-0RJPV8D9JB');
+		</script>
+	</head>
+	<body>
+		<header class="site-nav">
+			<nav class="container">
+				<a class="brand-link" href="./index.html" aria-label="all9s Solutions Eclipse Tools home">
+					<img class="brand-mark" src="./images/eclipse-tools-puzzle.png" alt="">
+					<span>Eclipse Tools</span>
+				</a>
+				<div class="nav-actions">
+					<a href="#tools">Tools</a>
+					<a href="#install">Install</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="hero-section">
+				<div class="container hero-content">
+					<div class="hero-copy">
+						<p class="eyebrow">Eclipse plug-ins for Java productivity</p>
+						<h1>Eclipse tools for faster Java editor work.</h1>
+						<p class="lead">
+							Focused commands for ending comments and logging statements, complete with toolbar actions, editor context
+							menus, keyboard shortcuts, preferences, and help.
+						</p>
+						<div class="hero-actions">
+							<a class="btn btn-secondary btn-lg" href="#install">
+								<span class="bi bi-download pe-1" aria-hidden="true"></span>Install From Update Site
+							</a>
+							<a class="btn btn-outline-light btn-lg" href="https://github.com/josephburris9999/projects" target="_blank">
+								<span class="bi bi-github pe-1" aria-hidden="true"></span>View Source
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="container px-4 py-5">
+				<div class="row align-items-center section-band" id="tools">
+					<div class="col-lg-5 p-4">
+						<p class="section-kicker">The suite</p>
+						<h2>Streamlined commands for faster Java coding.</h2>
+					</div>
+					<div class="col-lg-7 p-4">
+						<p class="mt-lg-5">
+							The feature packages Ender, Lumberjack, the Lumberjack help bundle, and shared branding into an Eclipse
+							p2 update site. The plug-ins activate in the Java editor and expose commands through the main toolbar,
+							editor context menu, and keyboard bindings.
+						</p>
+					</div>
+				</div>
+				<div class="tool-grid">
+					<article class="tool-card">
+						<div class="tool-icon">
+							<img src="./images/end.png" alt="Ender logo" aria-hidden="true">
+							<h3>Ender</h3>
+						</div>
+						<p>
+							Adds configurable ending comments to Java methods and control blocks so long files stay easier to scan.
+							Preferences let teams choose the ending-comment style they want generated.
+						</p>
+						<ul>
+							<li><span class="bi bi-keyboard" aria-hidden="true"></span>Command shortcut: Ctrl+Shift+E</li>
+							<li><span class="bi bi-sliders" aria-hidden="true"></span>Workbench preference page</li>
+							<li><span class="bi bi-code-square" aria-hidden="true"></span>Available in Java editor scope</li>
+						</ul>
+					</article>
+					<article class="tool-card">
+						<div class="tool-icon">
+							<img src="./images/axe.png" alt="Lumberjack logo" aria-hidden="true">
+							<h3>Lumberjack</h3>
+						</div>
+						<p>
+							Opens a wizard that previews generated logging before applying changes. It supports framework choices,
+							method entry and exit logging, control-flow statements, variables, method calls, and switch statements.
+						</p>
+						<ul>
+							<li><span class="bi bi-keyboard" aria-hidden="true"></span>Command shortcut: Ctrl+Shift+L</li>
+							<li><span class="bi bi-window-sidebar" aria-hidden="true"></span>Selections and preview wizard</li>
+							<li><span class="bi bi-journal-text" aria-hidden="true"></span>Bundled Eclipse help content</li>
+						</ul>
+					</article>
+				</div>
+				<div class="row align-items-center section-band install-band" id="install">
+					<div class="col-lg-6 p-4">
+						<p class="section-kicker">Install path</p>
+						<h2>Install through Eclipse.</h2>
+						<p>
+							Get started by adding the all9s Solutions update site to Eclipse.
+						</p>
+					</div>
+					<div class="col-lg-6 p-4">
+						<div class="install-steps">
+							<div><span>1</span><p>Open <strong>Help &gt; Install New Software...</strong></p></div>
+							<div><span>2</span><p>Add the all9s Solutions update-site URL.</p></div>
+							<div><span>3</span><p>Select the desired plug-ins or install the complete suite.</p></div>
+							<div><span>4</span><p>Complete the installation and restart Eclipse when prompted.</p></div>
+							<div><span>5</span><p>Open a Java source file and begin using the all9s Solutions productivity tools.</p></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="w-100 mx-auto p-4 text-center">
+			<ul class="w-100 list-inline my-2 d-inline-block">
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="mailto:hello@all9ssolutions.com?subject=all9s%20Eclipse%20Tools" title="Contact all9s Solutions LLC"><span class="bi bi-2x bi-envelope me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="https://www.linkedin.com/in/joseph-burris-5a13ba409" title="LinkedIn" target="_blank"><span class="bi bi-2x bi-linkedin me-2" aria-hidden="true"></span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="https://github.com/josephburris9999/projects" title="GitHub" target="_blank"><span class="bi bi-2x bi-github me-2" aria-hidden="true"></span></a>
+				</li>
+			</ul>
+			<ul class="w-100 list-inline my-2 d-inline-block">
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./termsofuse.html" title="Terms Of Use"><span class="bi bi-2x bi-text-paragraph me-2" aria-hidden="true"></span><span class="fs-7">Terms</span></a>
+				</li>
+				<li class="list-inline-item mb-1 me-3">
+					<a class="link-primary" href="./privacypolicy.html" title="Privacy Policy"><span class="bi bi-2x bi-key me-2" aria-hidden="true"></span><span class="fs-7">Privacy Policy</span></a>
+				</li>
+			</ul>
+			<small class="w-100 my-2 fs-7 d-inline-block">
+				Copyright &copy; 2026 <a class="link-primary" href="https://all9ssolutions.com/" target="_blank">all9s Solutions LLC</a>, all rights reserved.
+			</small>
+		</footer>
+	</body>
+</html>

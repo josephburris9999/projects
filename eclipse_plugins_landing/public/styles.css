@@ -1,0 +1,569 @@
+/*
+ * all9s Solutions Eclipse Tools landing page styles.
+ * @author Joseph Burris
+ */
+
+:root{
+	--body-color:rgb(10,33,64);
+	--body-color-deep:rgb(5,18,39);
+	--body-bg-color:rgb(239,245,251);
+	--surface-color:rgb(255,255,255);
+	--surface-blue:rgb(225,237,247);
+	--ink-color:rgb(21,31,44);
+	--muted-color:rgb(86,101,118);
+	--line-color:rgba(10,33,64,.16);
+	--accent-color:rgb(27,139,173);
+	--gold-color:rgb(232,178,76);
+	--coral-color:rgb(199,83,79);
+	--green-color:rgb(31,113,92);
+	--secondary-color:rgb(8,42,77);
+	--secondary-color-hover:rgb(5,28,54);
+	--secondary-bg-color:rgb(255,255,255);
+	--secondary-bg-color-hover:rgb(229,241,252);
+	--secondary-bdr-color:rgb(255,255,255);
+	--secondary-bdr-color-hover:rgb(198,223,244);
+	--secondary-shadow-color:rgba(27,139,173,.28)
+}
+
+html{
+	min-height:100%;
+	position:relative;
+	scroll-behavior:smooth
+}
+
+body{
+	background-color:var(--body-bg-color);
+	color:var(--ink-color);
+	cursor:default;
+	font-size:1.02rem;
+	line-height:1.65
+}
+
+code{
+	color:rgb(126,43,61)
+}
+
+footer{
+	background-color:rgb(232,239,247);
+	border-top:1px solid var(--line-color);
+	line-height:1rem
+}
+
+a.link-primary,
+a.link-primary:focus,
+a.link-primary:visited{
+	color:var(--body-color) !important;
+	text-decoration:underline;
+	text-decoration-color:currentColor !important
+}
+
+a.link-primary:hover{
+	color:var(--accent-color) !important;
+	text-decoration:none
+}
+
+.fs-7{
+	font-size:.9rem !important
+}
+
+.btn-secondary{
+	background-color:var(--secondary-bg-color);
+	border-color:var(--secondary-bdr-color);
+	color:var(--secondary-color)
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus{
+	background-color:var(--secondary-bg-color-hover);
+	border-color:var(--secondary-bdr-color-hover);
+	color:var(--secondary-color-hover)
+}
+
+.btn-secondary:focus{
+	box-shadow:0 0 0 .25rem var(--secondary-shadow-color)
+}
+
+.btn-site-primary{
+	background-color:var(--body-color);
+	border-color:var(--body-color);
+	color:rgb(255,255,255)
+}
+
+.btn-site-primary:hover,
+.btn-site-primary:focus{
+	background-color:var(--accent-color);
+	border-color:var(--accent-color);
+	color:rgb(255,255,255)
+}
+
+.site-nav{
+	background-color:rgba(5,18,39,.93);
+	border-bottom:1px solid rgba(255,255,255,.1);
+	position:sticky;
+	top:0;
+	z-index:10
+}
+
+.site-nav nav{
+	align-items:center;
+	display:flex;
+	justify-content:space-between;
+	min-height:4.25rem
+}
+
+.brand-link{
+	align-items:center;
+	color:rgb(255,255,255);
+	display:inline-flex;
+	font-weight:800;
+	gap:.7rem;
+	text-decoration:none
+}
+
+.brand-link:hover{
+	color:rgb(255,255,255)
+}
+
+.brand-mark{
+	align-items:center;
+	border-radius:.35rem;
+	color:var(--body-color-deep);
+	display:inline-flex;
+	font-size:1.25rem;
+	height:2.2rem;
+	justify-content:center;
+	width:2.2rem
+}
+
+.nav-actions{
+	display:flex;
+	flex-wrap:wrap;
+	gap:.9rem;
+	justify-content:flex-end
+}
+
+.nav-actions a{
+	color:rgba(255,255,255,.82);
+	font-size:.92rem;
+	text-decoration:none
+}
+
+.nav-actions a:hover,
+.nav-actions a:focus{
+	color:var(--gold-color)
+}
+
+.hero-section{
+	align-items:center;
+	background:
+		linear-gradient(90deg,rgba(5,18,39,.98),rgba(10,33,64,.92) 48%,rgba(27,139,173,.22)),
+		url("./images/eclipse-tools-hero.png") no-repeat right center,
+		linear-gradient(135deg,var(--body-color-deep),var(--body-color));
+	background-size:auto, cover, auto;
+	color:var(--bs-white);
+	display:flex;
+	min-height:clamp(31rem,70vh,42rem);
+	overflow:hidden;
+	position:relative
+}
+
+.hero-content{
+	align-items:center;
+	position:relative;
+	z-index:1
+}
+
+.hero-copy{
+	max-width:47rem;
+	padding:3.5rem 0
+}
+
+.eyebrow,
+.section-kicker{
+	font-size:.78rem;
+	font-weight:800;
+	letter-spacing:.08rem;
+	margin-bottom:.65rem;
+	text-transform:uppercase
+}
+
+.hero-section h1{
+	font-size:clamp(2.45rem,4.9vw,4.2rem);
+	font-weight:800;
+	letter-spacing:0;
+	line-height:.98;
+	margin-bottom:1.25rem
+}
+
+.hero-section .lead{
+	color:rgba(255,255,255,.92);
+	font-size:clamp(1.08rem,2.1vw,1.34rem);
+	max-width:43rem
+}
+
+.hero-actions{
+	align-items:flex-start;
+	display:flex;
+	flex-wrap:wrap;
+	gap:.8rem;
+	margin-top:1.85rem
+}
+
+.hero-actions .btn-outline-light:hover,
+.hero-actions .btn-outline-light:focus,
+.hero-actions .btn-outline-light:active{
+	background-color:rgb(255,255,255) !important;
+	border-color:rgb(255,255,255) !important;
+	color:var(--body-color) !important
+}
+
+.hero-actions .btn-secondary:hover,
+.hero-actions .btn-secondary:focus,
+.hero-actions .btn-secondary:active{
+	background-color:transparent !important;
+	border-color:rgb(255,255,255) !important;
+	color:rgb(255,255,255) !important
+}
+
+.metric-strip{
+	display:grid;
+	gap:1rem;
+	grid-template-columns:repeat(4,minmax(0,1fr));
+	margin-bottom:3rem;
+	margin-top:-4rem;
+	position:relative;
+	z-index:2
+}
+
+.metric-strip div{
+	background-color:var(--surface-color);
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	box-shadow:0 1rem 2rem rgba(10,33,64,.12);
+	min-height:8rem;
+	padding:1.2rem
+}
+
+.metric-strip strong{
+	color:var(--body-color);
+	display:block;
+	font-size:clamp(1.7rem,3vw,2.35rem);
+	font-weight:800;
+	line-height:1.05
+}
+
+.metric-strip span{
+	color:var(--muted-color);
+	display:block;
+	margin-top:.45rem
+}
+
+.section-band{
+	border-top:1px solid var(--line-color);
+	padding-bottom:2rem;
+	padding-top:2rem
+}
+
+.section-band h2{
+	color:var(--ink-color);
+	font-size:clamp(1.7rem,3vw,2.45rem);
+	font-weight:800;
+	line-height:1.12
+}
+
+.section-kicker{
+	color:var(--accent-color)
+}
+
+.tool-grid{
+	display:grid;
+	gap:1rem;
+	grid-template-columns:repeat(2,minmax(0,1fr));
+	margin-bottom:1rem
+}
+
+.tool-card,
+.workflow-band>div{
+	background-color:var(--surface-color);
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	box-shadow:0 .75rem 1.5rem rgba(10,33,64,.08);
+	padding:1.5rem
+}
+
+.tool-icon{
+	align-items:center;
+	display:flex;
+	gap:.85rem;
+	justify-content:flex-start;
+	margin-bottom:1rem
+}
+
+.tool-icon img{
+	background:linear-gradient(135deg,var(--surface-blue),rgb(255,246,224));
+	border-radius:.45rem;
+	display:block;
+	height:2.5rem;
+	object-fit:contain;
+	padding:.75rem;
+	width:2.5rem
+}
+
+.tool-card h3,
+.workflow-band h3{
+	font-size:1.35rem;
+	font-weight:800;
+	line-height:1.2;
+	margin:0
+}
+
+.tool-card p,
+.workflow-band p{
+	color:var(--muted-color)
+}
+
+.tool-card ul{
+	display:grid;
+	gap:.5rem;
+	list-style:none;
+	margin:1.25rem 0 0;
+	padding:0
+}
+
+.tool-card li{
+	align-items:center;
+	color:var(--ink-color);
+	display:flex;
+	gap:.55rem
+}
+
+.tool-card li .bi,
+.workflow-band .bi{
+	color:var(--accent-color);
+	font-size:1.1rem
+}
+
+.workflow-band{
+	display:grid;
+	gap:1rem;
+	grid-template-columns:repeat(3,minmax(0,1fr));
+	margin-bottom:2rem
+}
+
+.workflow-band .bi{
+	display:block;
+	font-size:2rem;
+	margin-bottom:.8rem
+}
+
+.install-band{
+	background:
+		linear-gradient(135deg,rgba(255,255,255,.76),rgba(225,237,247,.76));
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	margin-bottom:2rem
+}
+
+.install-steps{
+	display:grid;
+	gap:.8rem
+}
+
+.install-steps div{
+	align-items:flex-start;
+	background-color:rgba(255,255,255,.78);
+	border:1px solid var(--line-color);
+	border-radius:.45rem;
+	display:flex;
+	gap:.8rem;
+	padding:.9rem
+}
+
+.install-steps span{
+	align-items:center;
+	background-color:var(--body-color);
+	border-radius:50%;
+	color:rgb(255,255,255);
+	display:inline-flex;
+	flex:0 0 2rem;
+	font-size:.9rem;
+	font-weight:800;
+	height:2rem;
+	justify-content:center
+}
+
+.install-steps p{
+	margin:0
+}
+
+.id-list{
+	display:flex;
+	flex-wrap:wrap;
+	gap:.65rem
+}
+
+.id-list code{
+	background-color:rgb(255,255,255);
+	border:1px solid var(--line-color);
+	border-radius:.35rem;
+	padding:.55rem .7rem
+}
+
+.legal-page{
+	background:
+		linear-gradient(180deg,rgba(239,245,251,.98),rgba(255,255,255,.94)),
+		url("./images/eclipse-tools-hero.png") no-repeat right top;
+	background-attachment:fixed;
+	background-size:auto, min(48vw,34rem)
+}
+
+.legal-hero{
+	background:
+		linear-gradient(90deg,rgba(5,18,39,.97),rgba(10,33,64,.9) 52%,rgba(27,139,173,.2)),
+		url("./images/eclipse-tools-hero.png") no-repeat right center;
+	background-size:cover;
+	color:rgb(255,255,255);
+	padding:5rem 0 4rem
+}
+
+.legal-hero h1{
+	font-size:clamp(2.55rem,7vw,5rem);
+	font-weight:800;
+	line-height:1;
+	margin-bottom:1rem
+}
+
+.legal-hero .lead{
+	color:rgba(255,255,255,.9);
+	max-width:44rem
+}
+
+.legal-content{
+	padding-bottom:4rem;
+	padding-top:3rem
+}
+
+.legal-content .col-lg-10{
+	background-color:rgba(255,255,255,.96);
+	border:1px solid var(--line-color);
+	border-radius:.5rem;
+	box-shadow:0 1rem 2rem rgba(10,33,64,.1);
+	padding:2rem
+}
+
+.legal-content h2{
+	color:var(--body-color);
+	font-size:1.25rem;
+	font-weight:800;
+	margin-bottom:.5rem;
+	margin-top:1.75rem
+}
+
+.legal-content h2:first-of-type{
+	margin-top:0
+}
+
+.legal-updated{
+	color:var(--muted-color);
+	font-size:.95rem
+}
+
+.legal-return{
+	display:flex;
+	justify-content:flex-end;
+	margin-top:2rem
+}
+
+.legal-return-top{
+	margin-bottom:1.5rem;
+	margin-top:0
+}
+
+@media (max-width:991.98px){
+	.tool-grid,
+	.workflow-band{
+		grid-template-columns:1fr
+	}
+
+	.hero-section{
+		background:
+			linear-gradient(90deg,rgba(5,18,39,.98),rgba(10,33,64,.91) 58%,rgba(27,139,173,.14)),
+			url("./images/eclipse-tools-hero.png") no-repeat right center,
+			linear-gradient(135deg,var(--body-color-deep),var(--body-color));
+		background-size:auto, cover, auto
+	}
+
+	.metric-strip{
+		grid-template-columns:repeat(2,minmax(0,1fr));
+		margin-top:-3rem
+	}
+}
+
+@media (max-width:575.98px){
+	.site-nav nav{
+		align-items:center;
+		gap:.65rem;
+		min-height:3.65rem
+	}
+
+	.brand-link{
+		font-size:.92rem
+	}
+
+	.nav-actions{
+		gap:.55rem;
+		justify-content:flex-end
+	}
+
+	.nav-actions a{
+		font-size:.84rem
+	}
+
+	.hero-section{
+		background:
+			linear-gradient(180deg,rgba(5,18,39,.97),rgba(10,33,64,.92)),
+			url("./images/eclipse-tools-hero.png") no-repeat center bottom,
+			linear-gradient(135deg,var(--body-color-deep),var(--body-color));
+		background-size:auto, cover, auto;
+		min-height:auto
+	}
+
+	.hero-copy{
+		padding:1.2rem 0 .25rem
+	}
+
+	.hero-section h1{
+		font-size:clamp(2.05rem,9.2vw,2.85rem)
+	}
+
+	.hero-section .lead{
+		font-size:1rem;
+		line-height:1.42
+	}
+
+	.hero-actions .btn{
+		font-size:.98rem;
+		padding:.6rem .75rem
+	}
+
+	.metric-strip{
+		grid-template-columns:1fr;
+		margin-top:-1.5rem
+	}
+
+	.metric-strip div{
+		min-height:auto
+	}
+
+	.install-band{
+		border-left:0;
+		border-radius:0;
+		border-right:0;
+		margin-left:-1.5rem;
+		margin-right:-1.5rem
+	}
+
+	.legal-content .col-lg-10{
+		padding:1.25rem
+	}
+}

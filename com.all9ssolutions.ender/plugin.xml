@@ -56,13 +56,6 @@ SPDX-License-Identifier: EPL-2.0'
       </command>
     </menuContribution>
   </extension>
-  <extension point="org.eclipse.help.toc">
-    <toc file="toc.xml"
-      primary="true"/>
-  </extension>
-  <extension point="org.eclipse.help.contexts">
-    <contexts file="ender_context.xml" plugin ="com.all9ssolutions.ender"/>
-  </extension>
   <extension point="org.eclipse.core.expressions.definitions">
     <definition id="when.java.is.active">
       <with variable="activeContexts">

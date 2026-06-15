@@ -8,3 +8,6 @@
 - Removed deprecated Java model API usage from action classes.
 - Normalized generated Lumberjack log messages so embedded line endings are trimmed before statement generation.
 - Added shared open-source project documentation and license references.
+- Added a dedicated Ender help bundle and included it in the Ender feature.
+- Added Marketplace readiness notes and lightweight documentation landing pages.
+- Expanded update-site categories for Ender, Lumberjack, and the complete suite.
