@@ -83,6 +83,13 @@ a {
   font-size: 1.05rem;
 }
 
+.specialization-line {
+  color: #eef4f5;
+  font-size: 0.96rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+}
+
 .contact-list {
   display: grid;
   gap: 0.55rem;
@@ -167,6 +174,7 @@ a {
 .summary-text {
   color: #eef4f5;
   font-size: 1.03rem;
+  margin-bottom: 0.85rem;
 }
 
 .skills-groups {
@@ -175,6 +183,7 @@ a {
 }
 
 .skills-group {
+  align-items: baseline;
   display: grid;
   gap: 0.25rem;
   grid-template-columns: minmax(11rem, 0.24fr) minmax(0, 1fr);
@@ -277,6 +286,20 @@ a {
 
 .project-grid {
   grid-template-columns: 1fr;
+}
+
+.certificate-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.certificate-list p {
+  border-left: 3px solid var(--resume-accent);
+  color: #373c43;
+  font-size: 0.94rem;
+  font-weight: 700;
+  margin: 0;
+  padding-left: 0.8rem;
 }
 
 .strength-grid {
@@ -403,15 +426,30 @@ a {
     color: var(--resume-ink);
   }
 
+  .download-link {
+    display: none !important;
+  }
+
   .resume-role,
+  .specialization-line,
   .contact-list a,
   .contact-list span,
   .summary-text {
     color: var(--resume-ink);
   }
 
+  .contact-list a[target="_blank"] span {
+    display: none;
+  }
+
+  .contact-list a[target="_blank"]::after {
+    content: attr(href);
+    overflow-wrap: anywhere;
+  }
+
   .content-section,
   .resume-item,
+  .certificate-list p,
   .project-item,
   .strength-grid > div {
     break-inside: avoid;
